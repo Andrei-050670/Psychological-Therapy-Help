@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Иннеса Симакина | Ассоциация практической психологии и гипнотерапии</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo-container">
+                <div class="brand-text-block">
+                    <span class="brand-title">Ассоциация практической психологии</span>
+                    <span class="brand-motto">Кабинет гипнотерапии Инессы Симакиной</span>
+                </div>
+            </a>
+            <nav class="nav-menu">
+                <a href="#about" class="nav-link">О специалисте</a>
+                <a href="#methods" class="nav-link">Методики</a>
+                <a href="#requests" class="nav-link">Запросы</a>
+                <a href="#books" class="nav-link">Книги & Проекты</a>
+                <a href="#reviews" class="nav-link">Отзывы</a>
+                <button onclick="openModal()" class="btn btn-primary">Записаться</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">ГЛУБИННАЯ ПСИХОТЕРАПИЯ & ГИПНОЗ</span>
+                <h1>Найти верный ориентир, когда корабль сознания попал в шторм</h1>
+                <p>
+                    Когда стресс и тревога подрывают внутренний баланс, капитану нужен профессиональный штурман. Научно обоснованные трансовые техники, эриксоновский гипноз, КПТ и редкие международные методики для обретения целостности и гармонии.
+                </p>
+                <div class="hero-actions">
+                    <button onclick="openModal()" class="btn btn-primary">Записаться на сессию</button>
+                    <a href="#methods" class="btn btn-secondary">Изучить методы</a>
+                </div>
+                <div class="hero-meta-grid">
+                    <div class="meta-item">
+                        <h4>26+ лет</h4>
+                        <p>в психологии и педагогике</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>4600+</h4>
+                        <p>часов консультаций</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>ВЕИП</h4>
+                        <p>академическая база</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-profile-card">
+                <img src="profile.jpg" alt="Симакина Инесса Владимировна" class="hero-profile-img">
+                <h3 style="color:#ffffff; font-size:1.2rem;">Инесса Симакина</h3>
+                <p style="color:#c5a059; font-size:0.88rem; margin-top:4px;">Психолог, Гипнотерапевт, Супервизор, Автор книг</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- THOUGHTS / REQUESTS -->
+    <section id="requests" class="thoughts-section">
+        <div class="container">
+            <span class="sub-heading text-center">ЗНАКОМЫЕ МЫСЛИ?</span>
+            <h2 class="section-title text-center">С какими запросами к нам обращаются</h2>
+            <p class="section-desc text-center">Если вы узнаете себя хотя бы в одном из этих утверждений — вы можете получить бережную профессиональную помощь.</p>
+            
+            <div class="thoughts-grid">
+                <div class="thought-card">«У нас с мужем частые ссоры, пропало влечение друг к другу...»</div>
+                <div class="thought-card">«Я не справляюсь со своими эмоциями и постоянно чувствую тревогу.»</div>
+                <div class="thought-card">«Мне страшно ездить в метро и появляться в людных местах.»</div>
+                <div class="thought-card">«Чувствую эмоциональное выгорание и не знаю, куда двигаться дальше.»</div>
+                <div class="thought-card">«Я не уверена в себе, мне трудно обозначить личные границы.»</div>
+                <div class="thought-card">«Ребенок обманывает, проявляет агрессию или закрывается от меня.»</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div>
+                    <span class="sub-heading">ОБРАЗОВАНИЕ И ОПЫТ</span>
+                    <h2>Симакина Инесса Владимировна</h2>
+                    <p style="color:#94a3b8; margin-top:15px;">
+                        Психолог, гипнотерапевт, профайлер, редактор научных курсов и сборников Восточно-Европейского Института Психоанализа (ВЕИП). Организатор и эксперт международных психологических конференций.
+                    </p>
+                    <ul class="about-text-list">
+                        <li>Восточно-Европейский Институт Психоанализа (Психологическое консультирование)</li>
+                        <li>Лучшие методики Эриксоновского гипноза для жизни и здоровья</li>
+                        <li>Интегративная психотерапия неврозов, тревоги и панических атак</li>
+                        <li>Краткосрочная психотерапия сексуальных дисфункций и психосоматики</li>
+                        <li>Более 450 часов личной терапии, супервизий и интервизий</li>
+                        <li>Работа на русском и английском языках (Multicultural Sensitivities)</li>
+                    </ul>
+                </div>
+                <div>
+                    <div style="background-color:#162232; padding:30px; border-radius:12px; border:1px solid #1e293b;">
+                        <h3 style="color:#c5a059; margin-bottom:15px;">Авторские программы & Проекты</h3>
+                        <p style="color:#94a3b8; font-size:0.92rem; line-height:1.6;">
+                            • Тренинг «Развитие коммуникативных навыков и уверенности»<br>
+                            • Курс «Теория обмана: профайлинг на 5+»<br>
+                            • Программа «Выбор партнера и гармоничные отношения»<br>
+                            • Проект «Онлайн-театр эмоций» & Киноклуб<br>
+                            • Группы поддержки и супервизии для начинающих специалистов
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METHODS & EXCLUSIVES -->
+    <section id="methods" class="methods-section">
+        <div class="container">
+            <span class="sub-heading text-center">ЭФФЕКТИВНЫЕ ИНСТРУМЕНТЫ</span>
+            <h2 class="section-title text-center">Психотерапевтические методики</h2>
+            <p class="section-desc text-center">Сочетание традиционного психоанализа, КПТ и редких международных трансовых практик.</p>
+
+            <div class="methods-grid">
+                <div class="method-card featured">
+                    <span style="color:#c5a059; font-size:0.75rem; font-weight:700;">МЕЖДУНАРОДНАЯ ПРАКТИКА (ЮАР)</span>
+                    <h3 style="margin-top:5px;">Африканская гипнотерапия</h3>
+                    <p>Уникальный 3-сессионный курс трансовой терапии. Позволяет проработать глубинную психосоматику, страхи, зажимы и раскрыть внутренний потенциал («пробудить внутреннего льва»).</p>
+                </div>
+
+                <div class="method-card featured">
+                    <span style="color:#c5a059; font-size:0.75rem; font-weight:700;">ВОСТОЧНАЯ МЕТОДИКА (КИТАЙ)</span>
+                    <h3 style="margin-top:5px;">Образная коммуникация (ICP)</h3>
+                    <p>Психотерапия на основе восточной философии, буддизма и даосизма (автор Чжу Цзяньцзюн). Мягкая работа с бессознательным через символы и образы.</p>
+                </div>
+
+                <div class="method-card">
+                    <h3>Когнитивно-поведенческая терапия (КПТ)</h3>
+                    <p>Работа с паническими атаками, депрессией, катастрофизацией и негативными установками с доказанной эффективностью.</p>
+                </div>
+
+                <div class="method-card">
+                    <h3>Эриксоновский гипноз & ЭОТ</h3>
+                    <p>Мягкие трансовые состояния для работы с психосоматическими проявлениями, застарелыми травмами и сбоями обмена веществ.</p>
+                </div>
+
+                <div class="method-card">
+                    <h3>Семейная терапия & Сексология</h3>
+                    <p>Преодоление кризисов 3, 7, 10 лет брака, проработка измен, восстановление влечения и гармоничной коммуникации в паре.</p>
+                </div>
+
+                <div class="method-card">
+                    <h3>Кинотерапия & Арт-терапия</h3>
+                    <p>Терапия через анализ художественных образов, кинофильмов и символов для проработки вытесненных эмоций.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKS SECTION -->
+    <section id="books" class="books-section">
+        <div class="container">
+            <span class="sub-heading text-center">ПУБЛИКАЦИИ</span>
+            <h2 class="section-title text-center">Авторские книги Инессы Симакиной</h2>
+            
+            <div class="books-grid">
+                <div class="book-card">
+                    <h3>«Любовь – это выбор»</h3>
+                    <p>Книга о психологии гармоничных отношений, осознанном выборе партнера и выходе из сценариев созависимости.</p>
+                    <a href="https://www.litres.ru/71501662/" target="_blank" class="btn btn-secondary">Читать на ЛитРес &rarr;</a>
+                </div>
+
+                <div class="book-card">
+                    <h3>«Теория и практика обмана»</h3>
+                    <p>Практическое руководство по профайлингу, распознаванию вербальных и невербальных манипуляций в бизнесе и жизни.</p>
+                    <a href="https://www.litres.ru/book/inessa-simakina/teoriya-i-praktika-obmana-profayling-na-pyat-s-plusom-72194455/" target="_blank" class="btn btn-secondary">Купить на ЛитРес &rarr;</a>
+                </div>
+
+                <div class="book-card">
+                    <h3>«Кинотерапия»</h3>
+                    <p>Лечение психических расстройств, тревоги и неврозов через глубокий анализ мирового кинематографа.</p>
+                    <a href="https://www.litres.ru/73977451/" target="_blank" class="btn btn-secondary">Купить на ЛитРес &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <span class="sub-heading text-center">ОТЗЫВЫ КЛИЕНТОВ И КОЛЛЕГ</span>
+            <h2 class="section-title text-center">Истории трансформации</h2>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <p>«Инесса скорректировала психосоматические болезни, возникшие из-за психических травм. С помощью Эриксоновского гипноза медикаменты наконец начали работать так, как эндокринологи не смогли сделать 20 лет!»</p>
+                    <div class="review-author">— Андрей Черкасский</div>
+                </div>
+
+                <div class="review-card">
+                    <p>«Inessa is a great therapist. Her English is perfect, she has multicultural sensitivities. After each session I immediately felt better. I approached her for couple's therapy and she helped a lot.»</p>
+                    <div class="review-author">— Alexandra (Couple's Therapy)</div>
+                </div>
+
+                <div class="review-card">
+                    <p>«Буквально за несколько сессий разобрали проблему и нашли пути решения. У нашего брака началась вторая жизнь! Спасибо огромное за возвращенную гармонию.»</p>
+                    <div class="review-author">— Сергей</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Ассоциация практической психологии и гипнотерапии | Инесса Симакина | psychological-therapy.help</p>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="contactModal" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <span class="modal-close-btn" onclick="closeModal()">&times;</span>
+            <h3 style="color:#ffffff; text-align:center; margin-bottom:10px;">Запись на консультацию</h3>
+            <p style="color:#94a3b8; text-align:center; font-size:0.9rem;">Свяжитесь напрямую с Инессой Владимировной для выбора удобного времени видеосессии:</p>
+
+            <a href="https://t.me/Innessa_Simakina" target="_blank" class="btn btn-primary btn-block" style="margin-top:20px; text-align:center;">
+                💬 Написать в Telegram
+            </a>
+
+            <div style="margin-top:25px; border-top:1px solid #1e293b; padding-top:15px;">
+                <p style="color:#c5a059; font-size:0.8rem; text-align:center; font-weight:700;">ДРУГИЕ СПОСОБЫ СВЯЗИ</p>
+                <ul class="direct-contacts-list">
+                    <li>📱 <a href="https://wa.me/79219653622" target="_blank">WhatsApp Direct</a></li>
+                    <li>📧 <a href="mailto:inessa@psychological-therapy.help">Отправить Email</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function openModal() {
+        document.getElementById("contactModal").style.display = "flex";
+    }
+    function closeModal() {
+        document.getElementById("contactModal").style.display = "none";
+    }
+    window.onclick = function(event) {
+        const modal = document.getElementById("contactModal");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+</body>
+</html>
