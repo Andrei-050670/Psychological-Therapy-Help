@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #f4f8fa; /* Свежий светлый фон с легким прохладным бирюзовым оттенком */
-    color: #1e293b; /* Глубокий темный графит для отличной читаемости */
+    background-color: #0f2d37; /* Насыщенная глубокая бирюза / Морская волна */
+    color: #e2f4f8;
     line-height: 1.6;
 }
 
@@ -27,7 +27,7 @@ a {
 
 .sub-heading {
     display: block;
-    color: #9b7a30; /* Благородное теплое золото / охра */
+    color: #e5be6b; /* Мягкое золотое сияние */
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -37,13 +37,13 @@ a {
 
 .section-title {
     font-size: 2.2rem;
-    color: #0f172a;
+    color: #ffffff;
     font-weight: 700;
     margin-bottom: 15px;
 }
 
 .section-desc {
-    color: #475569;
+    color: #afd6e1;
     max-width: 720px;
     margin: 0 auto 40px auto;
     font-size: 1.05rem;
@@ -62,25 +62,25 @@ a {
 }
 
 .btn-primary {
-    background-color: #0f3b46; /* Глубокий бирюзово-тиловый */
-    color: #ffffff;
+    background-color: #e5be6b;
+    color: #091c23;
 }
 
 .btn-primary:hover {
-    background-color: #164e5d;
+    background-color: #f3ce7f;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(15, 59, 70, 0.25);
+    box-shadow: 0 6px 20px rgba(229, 190, 107, 0.35);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: #0f3b46;
-    border: 1px solid #cbd5e1;
+    color: #e2f4f8;
+    border: 1px solid #235564;
 }
 
 .btn-secondary:hover {
-    background-color: #e2e8f0;
-    border-color: #0f3b46;
+    background-color: #174250;
+    border-color: #e5be6b;
 }
 
 .btn-block {
@@ -90,8 +90,8 @@ a {
 
 /* NAVBAR */
 .navbar {
-    background-color: rgba(244, 248, 250, 0.92);
-    border-bottom: 1px solid #e2e8f0;
+    background-color: rgba(15, 45, 55, 0.95);
+    border-bottom: 1px solid rgba(229, 190, 107, 0.25);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -120,13 +120,13 @@ a {
     font-weight: 700;
     font-size: 0.95rem;
     letter-spacing: 0.08em;
-    color: #0f3b46;
+    color: #e5be6b;
     text-transform: uppercase;
 }
 
 .brand-motto {
     font-size: 0.72rem;
-    color: #64748b;
+    color: #afd6e1;
 }
 
 .nav-menu {
@@ -137,19 +137,19 @@ a {
 
 .nav-link {
     font-size: 0.9rem;
-    color: #334155;
+    color: #d2ecf3;
     transition: color 0.2s ease;
 }
 
 .nav-link:hover {
-    color: #0f3b46;
+    color: #e5be6b;
 }
 
 /* HERO SECTION */
 .hero {
     padding: 90px 0 80px 0;
-    border-bottom: 1px solid #e2e8f0;
-    background: radial-gradient(circle at top right, rgba(15, 59, 70, 0.06), transparent 60%);
+    border-bottom: 1px solid #1c4a57;
+    background: radial-gradient(circle at top right, rgba(39, 126, 148, 0.35), transparent 65%);
 }
 
 .hero .container {
@@ -160,8 +160,8 @@ a {
 }
 
 .badge {
-    background-color: rgba(15, 59, 70, 0.08);
-    color: #0f3b46;
+    background-color: rgba(229, 190, 107, 0.18);
+    color: #e5be6b;
     padding: 6px 14px;
     border-radius: 20px;
     font-size: 0.78rem;
@@ -169,19 +169,19 @@ a {
     letter-spacing: 0.08em;
     display: inline-block;
     margin-bottom: 20px;
-    border: 1px solid rgba(15, 59, 70, 0.2);
+    border: 1px solid rgba(229, 190, 107, 0.35);
 }
 
 .hero h1 {
     font-size: 2.8rem;
     line-height: 1.25;
-    color: #0f172a;
+    color: #ffffff;
     margin-bottom: 20px;
     font-weight: 700;
 }
 
 .hero p {
-    color: #475569;
+    color: #afd6e1;
     font-size: 1.15rem;
     margin-bottom: 35px;
     line-height: 1.7;
@@ -198,42 +198,42 @@ a {
     gap: 15px;
     margin-top: 40px;
     padding-top: 30px;
-    border-top: 1px solid #e2e8f0;
+    border-top: 1px solid #1c4a57;
 }
 
 .meta-item h4 {
-    color: #0f3b46;
+    color: #e5be6b;
     font-size: 1.5rem;
     font-weight: 700;
 }
 
 .meta-item p {
     font-size: 0.85rem;
-    color: #64748b;
+    color: #8bbbc9;
     margin-bottom: 0;
 }
 
 .hero-profile-card {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
+    background-color: #163b47;
+    border: 1px solid rgba(229, 190, 107, 0.35);
     border-radius: 16px;
     padding: 25px;
     text-align: center;
-    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+    box-shadow: 0 20px 40px rgba(6, 20, 26, 0.35);
 }
 
 .hero-profile-img {
     width: 100%;
     max-width: 280px;
     border-radius: 12px;
-    border: 2px solid #0f3b46;
+    border: 2px solid #e5be6b;
     margin-bottom: 15px;
 }
 
 /* THOUGHTS / SYMPTOMS GRID */
 .thoughts-section {
     padding: 80px 0;
-    background-color: #ffffff;
+    background-color: #0a2028;
 }
 
 .thoughts-grid {
@@ -244,21 +244,21 @@ a {
 }
 
 .thought-card {
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
+    background-color: #163b47;
+    border: 1px solid #205362;
     border-radius: 10px;
     padding: 20px;
-    color: #334155;
+    color: #e2f4f8;
     font-style: italic;
     font-size: 0.95rem;
-    border-left: 3px solid #0f3b46;
+    border-left: 3px solid #e5be6b;
 }
 
 /* ABOUT SECTION */
 .about-section {
     padding: 90px 0;
-    background-color: #f4f8fa;
-    border-top: 1px solid #e2e8f0;
+    background-color: #0f2d37;
+    border-top: 1px solid #1c4a57;
 }
 
 .about-grid {
@@ -275,21 +275,21 @@ a {
 
 .about-text-list li {
     padding: 8px 0;
-    border-bottom: 1px solid #e2e8f0;
-    color: #334155;
+    border-bottom: 1px solid #1c4a57;
+    color: #d2ecf3;
     font-size: 0.95rem;
 }
 
 .about-text-list li::before {
     content: "✦ ";
-    color: #0f3b46;
+    color: #e5be6b;
 }
 
 /* METHODS & EXCLUSIVES */
 .methods-section {
     padding: 80px 0;
-    background-color: #ffffff;
-    border-top: 1px solid #e2e8f0;
+    background-color: #0a2028;
+    border-top: 1px solid #1c4a57;
 }
 
 .methods-grid {
@@ -300,8 +300,8 @@ a {
 }
 
 .method-card {
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
+    background-color: #163b47;
+    border: 1px solid #205362;
     border-radius: 12px;
     padding: 30px;
     transition: transform 0.3s ease;
@@ -309,23 +309,22 @@ a {
 
 .method-card:hover {
     transform: translateY(-5px);
-    border-color: #0f3b46;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    border-color: #e5be6b;
 }
 
 .method-card.featured {
-    border: 1px solid #0f3b46;
-    box-shadow: 0 0 25px rgba(15, 59, 70, 0.08);
+    border: 1px solid #e5be6b;
+    box-shadow: 0 0 25px rgba(229, 190, 107, 0.2);
 }
 
 .method-card h3 {
-    color: #0f172a;
+    color: #ffffff;
     font-size: 1.25rem;
     margin-bottom: 12px;
 }
 
 .method-card p {
-    color: #475569;
+    color: #afd6e1;
     font-size: 0.92rem;
     line-height: 1.6;
 }
@@ -333,8 +332,8 @@ a {
 /* BOOKS & MEDIA */
 .books-section {
     padding: 80px 0;
-    background-color: #f4f8fa;
-    border-top: 1px solid #e2e8f0;
+    background-color: #0f2d37;
+    border-top: 1px solid #1c4a57;
 }
 
 .books-grid {
@@ -345,23 +344,22 @@ a {
 }
 
 .book-card {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
+    background-color: #163b47;
+    border: 1px solid #205362;
     border-radius: 12px;
     padding: 30px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
 }
 
 .book-card h3 {
-    color: #0f3b46;
+    color: #e5be6b;
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
 .book-card p {
-    color: #475569;
+    color: #afd6e1;
     font-size: 0.9rem;
     flex-grow: 1;
     margin-bottom: 20px;
@@ -370,8 +368,8 @@ a {
 /* REVIEWS */
 .reviews-section {
     padding: 80px 0;
-    background-color: #ffffff;
-    border-top: 1px solid #e2e8f0;
+    background-color: #0a2028;
+    border-top: 1px solid #1c4a57;
 }
 
 .reviews-grid {
@@ -382,21 +380,21 @@ a {
 }
 
 .review-card {
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
+    background-color: #163b47;
+    border: 1px solid #205362;
     border-radius: 12px;
     padding: 25px;
 }
 
 .review-card p {
-    color: #334155;
+    color: #e2f4f8;
     font-size: 0.92rem;
     font-style: italic;
     margin-bottom: 15px;
 }
 
 .review-author {
-    color: #0f3b46;
+    color: #e5be6b;
     font-weight: 600;
     font-size: 0.85rem;
 }
@@ -404,10 +402,10 @@ a {
 /* FOOTER & MODAL */
 footer {
     padding: 35px 0;
-    background-color: #e2e8f0;
-    border-top: 1px solid #cbd5e1;
+    background-color: #06151a;
+    border-top: 1px solid #1c4a57;
     text-align: center;
-    color: #475569;
+    color: #6a9ba8;
     font-size: 0.85rem;
 }
 
@@ -417,23 +415,23 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(15, 23, 42, 0.6);
+    background: rgba(6, 21, 26, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
 }
 
 .modal-content {
-    background: #ffffff;
+    background: #163b47;
     padding: 2.5rem;
     border-radius: 14px;
     max-width: 480px;
     width: 90%;
     position: relative;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e5be6b;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
 }
 
 .modal-close-btn {
@@ -441,11 +439,11 @@ footer {
     top: 15px;
     right: 20px;
     font-size: 28px;
-    color: #64748b;
+    color: #afd6e1;
     cursor: pointer;
 }
 
-.modal-close-btn:hover { color: #0f3b46; }
+.modal-close-btn:hover { color: #e5be6b; }
 
 .direct-contacts-list {
     list-style: none;
@@ -456,12 +454,12 @@ footer {
 }
 
 .direct-contacts-list a {
-    color: #334155;
+    color: #d2ecf3;
     font-size: 0.9rem;
     text-decoration: none;
 }
 
-.direct-contacts-list a:hover { color: #0f3b46; }
+.direct-contacts-list a:hover { color: #e5be6b; }
 
 @media (max-width: 902px) {
     .hero .container, .about-grid { grid-template-columns: 1fr; }
