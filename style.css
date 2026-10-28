@@ -132,7 +132,11 @@ a {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 15px; /* уменьшаем расстояние между пунктами */
+}
+.nav-menu a {
+    font-size: 0.9rem; /* чуть более компактный и аккуратный шрифт */
+    white-space: nowrap; /* запрещаем перенос слов внутри пунктов */
 }
 
 .nav-link {
