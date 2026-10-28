@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы клиентов | Инесса Симакина — Психолог, Гипнотерапевт</title>
+    <meta name="description" content="Отзывы пациентов и коллег о работе с психологом и гипнотерапевтом Инессой Симакиной. КПТ, гипноз, работа с психосоматикой и семейными отношениями.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Стили для страницы архива отзывов */
+        .page-header {
+            padding: 140px 0 60px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(15, 45, 55, 0.95) 0%, rgba(10, 31, 38, 1) 100%);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .page-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--gold-light, #f4e2bb);
+            margin-bottom: 15px;
+        }
+        .page-subtitle {
+            color: #b0bec5;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .filter-tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 40px 0;
+        }
+        .tag-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: #e0e0e0;
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .tag-btn:hover, .tag-btn.active {
+            background: var(--gold, #d4af37);
+            color: #0f2d37;
+            font-weight: 600;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 25px;
+            padding: 40px 0 80px;
+        }
+
+        .review-card-full {
+            background: rgba(18, 53, 65, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .review-card-full:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .author-name {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--gold-light, #f4e2bb);
+        }
+        .review-date {
+            font-size: 0.8rem;
+            color: #80969b;
+        }
+        .review-category {
+            display: inline-block;
+            font-size: 0.75rem;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .review-text {
+            color: #d1dcdb;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            white-space: pre-line;
+        }
+
+        .reply-box {
+            background: rgba(10, 31, 38, 0.7);
+            border-left: 3px solid #d4af37;
+            padding: 12px 15px;
+            margin-top: 15px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.88rem;
+        }
+        .reply-author {
+            color: var(--gold-light, #f4e2bb);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .reply-text {
+            color: #a0b2b5;
+            font-style: italic;
+        }
+
+        .back-nav {
+            margin-bottom: 30px;
+        }
+        .back-link {
+            color: #d4af37;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            transition: opacity 0.2s;
+        }
+        .back-link:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Инесса Симакина</a>
+            <nav class="nav-menu">
+                <a href="index.html">Главная</a>
+                <a href="index.html#about">О мне</a>
+                <a href="index.html#services">Услуги</a>
+                <a href="reviews.html" class="active">Отзывы</a>
+                <a href="articles.html">Статьи</a>
+                <a href="index.html#contact" class="btn-primary-sm">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Отзывы клиентов и коллег</h1>
+            <p class="page-subtitle">Реальный опыт работы, истории трансформации и результаты терапии</p>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <div class="filter-tags">
+            <button class="tag-btn active" onclick="filterReviews('all')">Все отзывы (18)</button>
+            <button class="tag-btn" onclick="filterReviews('psychosomatics')">Психосоматика & Гипноз</button>
+            <button class="tag-btn" onclick="filterReviews('couples')">Парная & Семейная терапия</button>
+            <button class="tag-btn" onclick="filterReviews('anxiety')">Тревога & Личный рост</button>
+            <button class="tag-btn" onclick="filterReviews('english')">English Reviews</button>
+        </div>
+
+        <div class="reviews-grid">
+
+            <!-- 1 -->
+            <div class="review-card-full" data-category="anxiety">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Дмитрий Буржуй</div>
+                        <div class="review-date">6 февраля 2026</div>
+                    </div>
+                    <span class="review-category">Гипнотерапия & Трансовые техники</span>
+                    <p class="review-text">Инесса, очень грамотный специалист с разными гибкими техниками, особенно мне очень понравились трансовые. Большой опыт и в силу его очень интересные решения - вот наверное кредо этого специалиста. Мои вопросы были максимально разрешены. Благодарю Вас Инесса Владимировна!!!!</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">Благодарю за отзыв!)</div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="review-card-full" data-category="english couples">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Alexandra #1145001</div>
+                        <div class="review-date">2 февраля 2025</div>
+                    </div>
+                    <span class="review-category">Couple's Therapy / English</span>
+                    <p class="review-text">Inessa is a great therapist. Firstly, her English is perfect, and she has multicultural sensibilities. She is friendly, approachable, flexible, she is both good at listening and at providing insight. She gives homeworks so you can work on yourself! I approached her for couple's therapy and she was able to help a lot. After each session I immediately felt better. She is truly a great professional in her field. I've already recommended her to my close ones.</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">Thank you very much!</div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="review-card-full" data-category="psychosomatics">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Андрей Черкасский</div>
+                        <div class="review-date">27 января 2024</div>
+                    </div>
+                    <span class="review-category">Психосоматика & Эриксоновский гипноз</span>
+                    <p class="review-text">Удивительно, но Инесса Владимировна, кроме психологической помощи, смогла скорректировать и психосоматические болезни, которые являлись следствием психических травм, полученных в прошлом.
+Никогда бы не подумал, что наряду с психическими травмами, такие злостные и вечные болячки (как я думал) как диабет и неправильный обмен веществ можно скорректировать с помощью Эриксоновского гипноза. Но это факт! Конечно, я продолжаю принимать медикаменты, но они стали, наконец, работать, чего эндокринологи не смогли сделать в течение 20 лет.
+После нескольких сеансов улучшения были настолько явными и быстрыми, что влияние на исцеление других факторов отпадает полностью.
+Я бесконечно признателен Вам за профессионализм и человечность. Благодаря таким психотерапевтам жизнь становится прекрасна и удивительна! Низкий вам поклон, Инна!</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">Благодарю за прекрасный отзыв! Особенно приятно читать слова похвалы от коллеги и профессионала в своем деле.</div>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="review-card-full" data-category="couples">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Сергей #806874</div>
+                        <div class="review-date">30 апреля 2022</div>
+                    </div>
+                    <span class="review-category">Семейные отношения</span>
+                    <p class="review-text">Обратились вместе с женой. Инесса - отличный психолог! Буквально за несколько сессий разобрали проблему и нашли пути решения. Работает Инесса и правда профессионально! Я не ожидал, что проблему удастся решить так быстро. У нашего брака вторая жизнь! Спасибо огромное! Если ищете хорошего специалиста по семейным отношениям, обращайтесь!</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">Благодарю за отзыв!)</div>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="review-card-full" data-category="anxiety">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Катерина #1039901</div>
+                        <div class="review-date">18 апреля 2024</div>
+                    </div>
+                    <span class="review-category">Личная терапия & Самопознание</span>
+                    <p class="review-text">Инесса Владимировна - это островок безопасности и спокойствия для меня, профессионал своего дела, от которого чувствуется искренность, открытость и истинное желание помочь «мягкой рукой», но с отрезвляющими выводами, к которым ты придешь по итогу сам. На каждой сессии задается много вопросов на подумать, по окончании - даются задания для анализа и понимания себя.
+Инесса Владимировна - первый психолог, который «заставил» меня по-настоящему задуматься над волнующими вопросами и помог посмотреть на себя и свою жизнь под другим углом.</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">Благодарю от всего сердца) Мне очень приятно!</div>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="review-card-full" data-category="anxiety">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Юлия #917952</div>
+                        <div class="review-date">25 апреля 2023</div>
+                    </div>
+                    <span class="review-category">Тревожность & Сексология & Лила</span>
+                    <p class="review-text">Стабильно хожу к Инне около года, наши консультации помогли мне стать более цельной и спокойной. Уменьшилась тревога, появилось ощущение порядка в голове + Инна сексолог, что помогает мне улучшить отношения с мужем. Решение вопросов не растягивается на долгие консультации, а часто закрывается здесь и сейчас.
+Так же Инна проводит Лилу, трансформационная игра, участвовали с подругами, приятно провели время и многое поняли о себе.</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">Спасибо большое за теплый и искренний отзыв!</div>
+                </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="review-card-full" data-category="anxiety">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Елизавета #920181</div>
+                        <div class="review-date">2 мая 2023</div>
+                    </div>
+                    <span class="review-category">Длительная терапия & КПТ</span>
+                    <p class="review-text">Инесса Владимировна - прекрасный специалист, который горит своей работой. Я долго искала "своего" психолога и наконец нашла то, что нужно. В терапии уже больше, чем пол года. Всегда вовлечена в диалог, ищет разные подходы и методы, дает домашние задания. Замечаю, как моя жизнь с каждым днем становится лучше и спокойнее!</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">Спасибо большое за теплый отзыв!)</div>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="review-card-full" data-category="anxiety">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Светлана Андреева</div>
+                        <div class="review-date">26 апреля 2023</div>
+                    </div>
+                    <span class="review-category">Отзыв коллеги / Отношения</span>
+                    <p class="review-text">Прочитав информацию на профессиональной страничке Инессы Владимировны, я почувствовала, что хочу попасть именно к ней. И я довольна своим выбором. С Инной спокойно и безопасно. Результат консультаций - улучшение не только внутреннего состояния, а еще и отношений с мужем и детьми. Инна душевная, глубокая личность. Рекомендую!</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">Благодарю за такую высокую оценку от коллеги и прекрасного специалиста!</div>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="review-card-full" data-category="couples">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Маргарита #868824</div>
+                        <div class="review-date">25 ноября 2022</div>
+                    </div>
+                    <span class="review-category">Подростковая психология</span>
+                    <p class="review-text">Хочу поблагодарить Вас за работу, высокий профессионализм и умение поддержать. Вы помогаете людям и продолжаете помогать моему сыну-подростку — ведь это двойная помощь и для меня! Как мама я счастлива и спокойна, когда ребенок вышел из трудной ситуации благодаря настоящему Профессионалу.</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">Спасибо) Мне очень приятно!</div>
+                </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="review-card-full" data-category="anxiety">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Daria #1052114</div>
+                        <div class="review-date">24 мая 2024</div>
+                    </div>
+                    <span class="review-category">Домашние задания & Саморегуляция</span>
+                    <p class="review-text">Хороший и приятный специалист! Каждая сессия была очень продуктивная и потом Инесса дает домашние задания благодаря которым я научилась отслеживать и работать с многими своими реакциями! Большое спасибо!</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">Спасибо большое)</div>
+                </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="review-card-full" data-category="anxiety">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Nikita Star</div>
+                        <div class="review-date">10 мая 2023</div>
+                    </div>
+                    <span class="review-category">Личная терапия</span>
+                    <p class="review-text">Она помогла и помогает с разными трудностями и показывает их с разных сторон. С ней очень легко работать. Я стал лучше себя чувствовать и в целом стал наслаждаться жизнью больше. Инесса лучший специалист с кем я работал.</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">Благодарю за отзыв! С вами тоже приятно работать.)</div>
+                </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="review-card-full" data-category="anxiety">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Валерия #918021</div>
+                        <div class="review-date">3 мая 2023</div>
+                    </div>
+                    <span class="review-category">Поддержка в кризисе</span>
+                    <p class="review-text">Два месяца нахожусь в терапии с Инессой Владимировной. Мое состояние значительно улучшилось, на консультациях всегда чувство спокойствия и безопасности. Хочу поблагодарить за профессиональную помощь и поддержку в очень непростой жизненный период.</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">Спасибо большое) Я очень рада, что ваше состояние улучшилось.)</div>
+                </div>
+            </div>
+
+            <!-- 13 -->
+            <div class="review-card-full" data-category="anxiety">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Tina #879109</div>
+                        <div class="review-date">25 апреля 2023</div>
+                    </div>
+                    <span class="review-category">Проработка прошлого</span>
+                    <p class="review-text">Можете спокойно доверить себя, свои чувства и мысли Инессе) Инна помогла посмотреть на себя по-новому, "откопать" моменты из прошлого и главное прожить их и закрыть. Рекомендую этого специалиста всем своим знакомым.</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">От всей души благодарю за отзыв и рекомендации!)</div>
+                </div>
+            </div>
+
+            <!-- 14 -->
+            <div class="review-card-full" data-category="couples">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Марина #806862</div>
+                        <div class="review-date">30 апреля 2022</div>
+                    </div>
+                    <span class="review-category">Детско-родительские отношения</span>
+                    <p class="review-text">Инесса Владимировна, спасибо огромное за такой тонкий подход к любому сложному вопросу. Спасибо, что помогли разобраться в себе, разобраться в вопросах общения и принятия переходного возраста ребёнка.</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">Благодарю за отзыв!)</div>
+                </div>
+            </div>
+
+            <!-- 15 -->
+            <div class="review-card-full" data-category="anxiety">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Старая Нэн</div>
+                        <div class="review-date">30 апреля 2022</div>
+                    </div>
+                    <span class="review-category">Первый опыт терапии</span>
+                    <p class="review-text">Искренне благодарен Инессе Владимировне за помощь! Я долго не решался идти к психологу, но с первой же попытки мне повезло с потрясающим специалистом))</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">Благодарю за отзыв!)</div>
+                </div>
+            </div>
+
+            <!-- 16 -->
+            <div class="review-card-full" data-category="anxiety">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Аксёнова Дарья Владимировна</div>
+                        <div class="review-date">30 апреля 2022</div>
+                    </div>
+                    <span class="review-category">Личностные изменения</span>
+                    <p class="review-text">После долгих поисков своего специалиста я встретилась с Инессой Владимировной. Контакт удалось установить почти сразу. Наша работа очень благотворно влияет на мое состояние, даже окружающие подмечают изменения.</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">Благодарю за отзыв!)</div>
+                </div>
+            </div>
+
+            <!-- 17 -->
+            <div class="review-card-full" data-category="couples anxiety">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Елена #805715</div>
+                        <div class="review-date">26 апреля 2022</div>
+                    </div>
+                    <span class="review-category">Самооценка & Семейный конфликт</span>
+                    <p class="review-text">Благодарю Инессу за помощь. Пунктуальная, душевная, понимающая. Настоящий профессионал! Помогла повысить самооценку, решить конфликт с мужем и понять себя. Отдельное спасибо за материалы для чтения и упражнения!</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">Благодарю за отзыв!</div>
+                </div>
+            </div>
+
+            <!-- 18 -->
+            <div class="review-card-full" data-category="anxiety">
+                <div>
+                    <div class="review-header">
+                        <div class="author-name">Анна #806870</div>
+                        <div class="review-date">30 апреля 2022</div>
+                    </div>
+                    <span class="review-category">Систематическая терапия</span>
+                    <p class="review-text">Прохожу консультации у Инессы уже почти на протяжении года. Все консультации были на высшем уровне! Считаю Инессу идеальным специалистом! От души всем рекомендую!</p>
+                </div>
+                <div class="reply-box">
+                    <div class="reply-author">Инесса Симакина:</div>
+                    <div class="reply-text">Благодарю за отзыв!)</div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        function filterReviews(category) {
+            const buttons = document.querySelectorAll('.tag-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('.review-card-full');
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'flex';
+                } else {
+                    const categories = card.getAttribute('data-category').split(' ');
+                    if (categories.includes(category)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
