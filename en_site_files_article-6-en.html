@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Superfluous Man" Syndrome in Culture and Psychotherapy | Inessa Simakina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+:root {
+    --bg-dark: #0b2229;
+    --bg-card: rgba(18, 53, 65, 0.65);
+    --bg-card-hover: rgba(24, 68, 83, 0.85);
+    --gold-primary: #d4af37;
+    --gold-light: #f4e2bb;
+    --gold-border: rgba(212, 175, 55, 0.25);
+    --text-main: #e4eceb;
+    --text-muted: #9eb2b0;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    background: rgba(11, 34, 41, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+}
+.brand-block .brand-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.brand-block .brand-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.25s ease;
+}
+nav a:hover, nav a.active {
+    color: var(--gold-primary);
+}
+.btn-cta {
+    background-color: var(--gold-primary);
+    color: #0b2229 !important;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 6px;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+.btn-cta:hover {
+    background-color: var(--gold-light);
+    transform: translateY(-1px);
+}
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+}
+.article-container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 50px 24px 80px;
+}
+.page-header {
+    text-align: center;
+    margin-bottom: 55px;
+}
+.page-kicker {
+    color: var(--gold-primary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    margin-bottom: 12px;
+    display: block;
+}
+h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5rem;
+    color: var(--gold-light);
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 16px;
+}
+.page-subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 680px;
+    margin: 0 auto;
+}
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 28px;
+}
+.article-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 12px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.article-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold-primary);
+    background: var(--bg-card-hover);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+.review-category {
+    color: var(--gold-primary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+}
+.author-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    color: var(--gold-light);
+    margin: 12px 0;
+    line-height: 1.35;
+}
+.review-text {
+    font-size: 0.92rem;
+    color: #d1dcdb;
+    line-height: 1.6;
+}
+.card-footer {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+.card-meta {
+    font-size: 0.78rem;
+    color: #8a9b9a;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+.btn {
+    display: inline-block;
+    font-size: 0.85rem;
+    padding: 8px 16px;
+    color: var(--gold-primary);
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+.btn:hover {
+    background: var(--gold-primary);
+    color: #0b2229;
+    font-weight: 600;
+}
+.article-meta-author {
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    margin-bottom: 28px;
+}
+.abstract-box {
+    background: rgba(18, 53, 65, 0.55);
+    border-left: 3px solid var(--gold-primary);
+    border-radius: 0 10px 10px 0;
+    padding: 24px 28px;
+    margin-bottom: 36px;
+}
+.abstract-box h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--gold-light);
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+.abstract-box p {
+    font-size: 0.96rem;
+    color: #dce7e6;
+    margin-bottom: 14px;
+}
+.keywords {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+.keywords strong {
+    color: var(--gold-primary);
+}
+.article-body h2, .article-body h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--gold-light);
+    margin: 32px 0 14px;
+}
+.article-body p {
+    margin-bottom: 18px;
+    font-size: 1.02rem;
+    color: #e4eceb;
+}
+blockquote {
+    border-left: 2px solid var(--gold-primary);
+    padding: 12px 20px;
+    margin: 22px 0;
+    background: rgba(212, 175, 55, 0.06);
+    font-style: italic;
+    color: var(--gold-light);
+}
+.biblio-list {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+.biblio-list h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--gold-light);
+    margin-bottom: 14px;
+}
+.biblio-list ol {
+    padding-left: 22px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.biblio-list li {
+    margin-bottom: 8px;
+}
+.article-actions {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+@media (max-width: 768px) {
+    h1 { font-size: 1.9rem; }
+    header { flex-direction: column; gap: 12px; text-align: center; }
+    .articles-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="brand-block">
+        <div class="brand-title">Association of Practical Psychology</div>
+        <div class="brand-sub">Inessa Simakina's Hypnotherapy Practice</div>
+    </div>
+    <nav>
+        <a href="index_en.html#about">About Expert</a>
+        <a href="index_en.html#methods">Methods</a>
+        <a href="index_en.html#requests">Requests</a>
+        <a href="index_en.html#books">Books</a>
+        <a href="index_en.html#reviews">Reviews</a>
+        <a href="articles_en.html" class="active">Articles</a>
+        <a href="index_en.html#videos">Videos</a>
+        <a href="article-6.html" style="color: var(--gold-primary); font-weight: 600;">RU</a>
+        <a href="index_en.html#contact" class="btn-cta">Book Session</a>
+    </nav>
+</header>
+
+<main class="article-container">
+    <div style="margin-bottom: 24px;">
+        <a href="articles_en.html" class="btn">← Back to Articles</a>
+    </div>
+    <span class="page-kicker">Publicistics & Philosophy • Publicistics</span>
+    <h1>"Superfluous Man" Syndrome in Culture and Psychotherapy</h1>
+    <p class="article-meta-author">Author: Inessa Vladimirovna Simakina — Psychologist, Research Fellow, Saint Petersburg</p>
+
+    <div class="abstract-box">
+        <h2>Abstract</h2>
+        <p>This paper examines the psychological phenomenon of the 'superfluous man' syndrome across Russian and world literature, cinema, music, and contemporary clinical psychotherapy. Tracing the archetype from Ivan Turgenev's 'The Diary of a Superfluous Man' to Wim Wenders's road trilogy, Andrei Tarkovsky's 'Stalker,' and the philosophical writings of Erich Fromm, Irvin Yalom, Jacques Lacan, and James Hollis, the author analyzes how childhood emotional neglect and feelings of invisibility evolve into self-sabotage, somatized depression, and existential isolation—and outlines hypnotherapeutic and consciousness-activation protocols for restoring self-worth.</p>
+        <p class="keywords"><strong>Keywords:</strong> superfluous man, alienation, loneliness, existential isolation, somatized depression, consciousness activation.</p>
+        <div style="margin-top: 18px;">
+            <a href="https://cloud.mail.ru/public/yF3f/bMFVAhZhE" target="_blank" rel="noopener noreferrer" class="btn">Read full version (PDF) →</a>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <h2>The Archetype of Alienation in Literature, Music, and Cinema</h2>
+<p>Coined in 19th-century Russian culture following Ivan Turgenev's 'The Diary of a Superfluous Man,' the archetype describes an educated individual paralyzed by feelings of invisibility, unworthiness, and existential fatigue—an experience Olivia Laing later examined as the freezing isolation of urban loneliness. In 20th-century art, this alienation echoes in Schoenberg's twelve-tone serialism, Wim Wenders's road trilogy ('Alice in the Cities,' 'Wrong Move,' 'Kings of the Road'), Jia Zhangke's 'Caught by the Tides,' Bernardo Bertolucci's 'Last Tango in Paris,' and Andrei Tarkovsky's 'Stalker,' where the Zone confronts the human subject with their own shadow.</p>
+<h2>Existential Isolation, Childhood Scripts, and Self-Sabotage</h2>
+<p>Erich Fromm ('Escape from Freedom'), Irvin Yalom, and Jacques Lacan illuminate how perceived invisibility under the Gaze of the Other drives individuals either toward compulsive compliance, career detachment (such as rotational or seafaring isolation), or premature 'heroic' self-sacrifice. When early parental injunctions ('your opinion means nothing,' 'be convenient to be tolerated') take root, the adult psyche filters out acceptance and selectively reinforces rejection, often culminating in psychosomatic illness or masked depression.</p>
+<h2>Therapeutic Protocols: Consciousness Activation and Rescripting</h2>
+<p>Clinical recovery requires replacing defensive self-erasure with conscious agency. Alongside Ekaterina Tur's somatic awareness practices and Duncan McColl's forgiveness trance scripts, Bruno Suarez's Consciousness Activation Technique ('La Forza del Destino'—integrating restraining and driving forces held symbolically in each hand) enables clients to dismantle self-sabotaging life scripts, process deep-seated shame, and establish authentic life goals.</p>
+    </div>
+
+    <div class="biblio-list">
+        <h3>References</h3>
+        <ol>
+            <li>Becchio J., Suarez B. New in Hypnosis: Consciousness Activation Techniques. Moscow: IOI, 2023. 238 p.</li>
+<li>Simakina (Zaitseva) I.V. Hypnotic Scripts and Autotraining for Somatized Depression, Anxiety Disorders, and Psychosomatic Diseases. St. Petersburg, 2024. P. 157–169.</li>
+<li>Lacan J. The Mirror Stage as Formative of the Function of the I. Écrits.</li>
+<li>Laing O. The Lonely City: Adventures in the Art of Being Alone. Moscow: Ad Marginem, 2018. 352 p.</li>
+<li>Svetlichny A. Music: We Play in the Ruins // Seance, No. 876. P. 46–57.</li>
+<li>Simakina I.V. Cinema Therapy: Treatment of Mental Disorders and Neuroses. Moscow: LitRes. 250 p.</li>
+<li>Tur E. Psychosomatics: The Body Speaks. Moscow: Eksmo, 2025. 400 p.</li>
+<li>Turgenev I.S. The Diary of a Superfluous Man. Moscow, 1976. 494 p.</li>
+<li>Fromm E. Escape from Freedom. Moscow: AST, 2026. 288 p.</li>
+<li>Hollis J. The Middle Passage: From Misery to Meaning in Midlife. Moscow, 2024. 181 p.</li>
+<li>Yalom I.D. The Gift of Therapy. Moscow: Eksmo, 2026. 320 p.</li>
+<li>Clements J. Death as Life's Picture Frame // Philosophy Now, Issue 174, June/July 2026. P. 14–16.</li>
+<li>Sheldrake K., Konakanchi Y., Dienes Z. Experience of Responding to Imaginative Suggestions // International Journal of Clinical and Experimental Hypnosis, 2026, Vol. 74, No. 3. P. 298–318.</li>
+        </ol>
+    </div>
+
+    <div class="article-actions">
+        <a href="https://cloud.mail.ru/public/yF3f/bMFVAhZhE" target="_blank" rel="noopener noreferrer" class="btn">Read full version (PDF) →</a>
+        <a href="articles_en.html" class="btn">← Back to Articles</a>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Inessa Simakina — Practical Psychology &amp; Hypnotherapy. All rights reserved.</p>
+</footer>
+</body>
+</html>
