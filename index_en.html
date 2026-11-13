@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inessa Simakina | Association of Practical Psychology and Hypnotherapy</title>
-    <link rel="stylesheet" href="./style.css?v=2">
+    <link rel="stylesheet" href="./style.css?v=3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Исправление: золотая рамка у карточек методик в английской версии только при наведении */
+        .methods-grid .method-card {
+            border: 1px solid rgba(212, 175, 55, 0.15) !important;
+            transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+        }
+        .methods-grid .method-card:hover {
+            border-color: #d4af37 !important;
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
 <body>
     <!-- NAVBAR -->
@@ -220,7 +231,6 @@
             <h2 class="section-title text-center">Articles and Publications</h2>
             
             <div class="reviews-grid" style="margin-top: 40px;">
-                <!-- Article 1 -->
                 <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
                         <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">History of Hypnosis</span>
@@ -228,7 +238,6 @@
                         <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Study of hypnotic suggestions on patients' self-awareness and will in the works of domestic scientists and philosophers of the late 19th century.</p>
                     </div>
                 </div>
-                <!-- Article 2 -->
                 <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
                         <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Hypnoanalysis & Memory</span>
@@ -236,7 +245,6 @@
                         <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Analysis of memory mechanisms, regression techniques, and examples of successful trauma therapy from clinical practice.</p>
                     </div>
                 </div>
-                <!-- Article 3 -->
                 <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
                         <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Theory & Practice</span>
@@ -253,7 +261,7 @@
         </div>
     </section>
 
-    <!-- VIDEO SECTION PREVIEW -->
+    <!-- VIDEO SECTION PREVIEW (Без описаний, с кнопками-ссылками на видео) -->
     <section id="videos-preview" style="padding: 80px 0; background: rgba(15, 45, 55, 0.4);">
         <div class="container">
             <span class="sub-heading text-center">VIDEO ARCHIVE & WEBINARS</span>
@@ -265,7 +273,9 @@
                     <div>
                         <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Parenting Living Room</span>
                         <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Manipulations and Fears</h3>
-                        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Review of children's fears, manipulative behavioral patterns, and ways of establishing harmonious family interactions.</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://vkvideo.ru/video-170488771_456239041?t=10m31s" target="_blank" class="btn-secondary" style="display: block; text-align: center; padding: 10px; font-size: 0.9rem; text-decoration: none;">Watch video ▶</a>
                     </div>
                 </div>
                 <!-- Video 2 -->
@@ -273,7 +283,9 @@
                     <div>
                         <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Conscious Relationships</span>
                         <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Separation</h3>
-                        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Psychological separation from parents, gaining internal autonomy, and building mature partner connections.</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://vkvideo.ru/video-170488771_456239042?pl=5696666_55002254" target="_blank" class="btn-secondary" style="display: block; text-align: center; padding: 10px; font-size: 0.9rem; text-decoration: none;">Watch video ▶</a>
                     </div>
                 </div>
                 <!-- Video 3 -->
@@ -281,15 +293,19 @@
                     <div>
                         <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Conscious Relationships</span>
                         <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Traps of Jealousy</h3>
-                        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">The nature of jealousy in a couple, hidden fears of loss, trust, and working with destructive emotional reactions.</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://vkvideo.ru/video-170488771_456239044?pl=5696666_55002254&t=15s" target="_blank" class="btn-secondary" style="display: block; text-align: center; padding: 10px; font-size: 0.9rem; text-decoration: none;">Watch video ▶</a>
                     </div>
                 </div>
-                <!-- Video 4 (Clean card without extra link) -->
+                <!-- Video 4 -->
                 <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
                         <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Conscious Relationships</span>
                         <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">We Choose, We Are Chosen</h3>
-                        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Regularities of partner selection, unconscious scenarios, and mutual expectations in a couple.</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://vkvideo.ru/video-170488771_456239049?pl=5696666_55002254" target="_blank" class="btn-secondary" style="display: block; text-align: center; padding: 10px; font-size: 0.9rem; text-decoration: none;">Watch video ▶</a>
                     </div>
                 </div>
             </div>
@@ -342,7 +358,7 @@
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
                     <div style="font-size: 1.05rem; font-weight: 600;">Megalopolis</div>
                 </a>
-                    <a href="https://cloud.mail.ru/public/BkTd/DHNNY2S1x" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
+                <a href="https://cloud.mail.ru/public/BkTd/DHNNY2S1x" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
                     <div style="font-size: 1.05rem; font-weight: 600;">Narcissism</div>
                 </a>
