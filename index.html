@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Иннеса Симакина | Ассоциация практической психологии и гипнотерапии</title>
-    <link rel="stylesheet" href="./style.css?v=2">
+    <title>Инесса Симакина | Ассоциация практической психологии и гипнотерапии</title>
+    <link rel="stylesheet" href="./style.css?v=3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Исправление: золотая рамка у карточек методик только при наведении */
+        .methods-grid .method-card {
+            border: 1px solid rgba(212, 175, 55, 0.15) !important;
+            transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+        }
+        .methods-grid .method-card:hover {
+            border-color: #d4af37 !important;
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
 <body>
     <!-- NAVBAR -->
@@ -27,7 +38,7 @@
                 <a href="reviews.html" class="nav-link">Отзывы</a>
                 <a href="articles.html" class="nav-link">Статьи</a>
                 <a href="media.html" class="nav-link">Видео</a>
-                <a href="index_en.html" class="nav-link" style="border: 1px solid rgba(197, 160, 89, 0.4); padding: 4px 10px; border-radius: 4px; color: #C5A059; font-weight: 600;">EN</a>
+                <a href="index_en.html" class="nav-link" style="color: #c5a059; font-weight: 700;">EN</a>
                 <button onclick="openModal()" class="btn btn-primary">Записаться</button>
             </nav>
         </div>
@@ -44,7 +55,7 @@
                 </p>
                 <div class="hero-actions">
                     <button onclick="openModal()" class="btn btn-primary">Записаться на сессию</button>
-                    <a href="#methods" class="btn btn-secondary">Изучить методы</a>
+                    <a href="#methods" class="btn btn-secondary">Изучить методики</a>
                 </div>
                 <div class="hero-meta-grid">
                     <div class="meta-item">
@@ -62,7 +73,7 @@
                 </div>
             </div>
             <div class="hero-profile-card">
-                <img src="profile.jpg" alt="Симакина Инесса Владимировна" class="hero-profile-img">
+                <img src="profile.jpg" alt="Инесса Симакина" class="hero-profile-img">
                 <h3 style="color:#ffffff; font-size:1.2rem;">Инесса Симакина</h3>
                 <p style="color:#c5a059; font-size:0.88rem; margin-top:4px;">Психолог, Гипнотерапевт, Супервизор, Автор книг</p>
             </div>
@@ -80,7 +91,7 @@
                 <div class="thought-card">«У нас с мужем частые ссоры, пропало влечение друг к другу...»</div>
                 <div class="thought-card">«Я не справляюсь со своими эмоциями и постоянно чувствую тревогу.»</div>
                 <div class="thought-card">«Мне страшно ездить в метро и появляться в людных местах.»</div>
-                <div class="thought-card">«Чувствую эмоциональное выгорание и не знаю, куда двигаться дальше.»</div>
+                <div class="thought-card">«Я чувствую эмоциональное выгорание и не знаю, куда двигаться дальше.»</div>
                 <div class="thought-card">«Я не уверена в себе, мне трудно обозначить личные границы.»</div>
                 <div class="thought-card">«Ребенок обманывает, проявляет агрессию или закрывается от меня.»</div>
             </div>
@@ -95,7 +106,7 @@
                     <span class="sub-heading">ОБРАЗОВАНИЕ И ОПЫТ</span>
                     <h2>Симакина Инесса Владимировна</h2>
                     <p style="color:#94a3b8; margin-top:15px;">
-                        Психолог, гипнотерапевт, профайлер, редактор научных курсов и сборников Восточно-Европейского Института Психоанализа (ВЕИП). Организатор и эксперт международных психологических конференций.
+                        Психолог, гипнотерапевт, профилер, редактор научных курсов и сборников Восточно-Европейского Института Психоанализа (ВЕИП). Организатор и эксперт международных психологических конференций.
                     </p>
                     <ul class="about-text-list">
                         <li>Восточно-Европейский Институт Психоанализа (Психологическое консультирование)</li>
@@ -129,12 +140,12 @@
             <h2 class="section-title text-center">Психотерапевтические методики</h2>
             <p class="section-desc text-center">Сочетание традиционного психоанализа, КПТ и редких международных трансовых практик.</p>
             <div class="methods-grid">
-                <div class="method-card featured">
+                <div class="method-card">
                     <span style="color:#c5a059; font-size:0.75rem; font-weight:700;">МЕЖДУНАРОДНАЯ ПРАКТИКА (ЮАР)</span>
                     <h3 style="margin-top:5px;">Африканская гипнотерапия</h3>
                     <p>Уникальный 3-сессионный курс трансовой терапии. Позволяет проработать глубинную психосоматику, страхи, зажимы и раскрыть внутренний потенциал («пробудить внутреннего льва»).</p>
                 </div>
-                <div class="method-card featured">
+                <div class="method-card">
                     <span style="color:#c5a059; font-size:0.75rem; font-weight:700;">ВОСТОЧНАЯ МЕТОДИКА (КИТАЙ)</span>
                     <h3 style="margin-top:5px;">Образная коммуникация (ICP)</h3>
                     <p>Психотерапия на основе восточной философии, буддизма и даосизма (автор Чжу Цзяньцзюн). Мягкая работа с бессознательным через символы и образы.</p>
@@ -167,7 +178,7 @@
             
             <div class="books-grid">
                 <div class="book-card">
-                    <h3>«Любовь – это выбор»</h3>
+                    <h3>«Любовь — это выбор»</h3>
                     <p>Книга о психологии гармоничных отношений, осознанном выборе партнера и выходе из сценариев созависимости.</p>
                     <a href="https://www.litres.ru/71501662/" target="_blank" class="btn btn-secondary">Читать на ЛитРес &rarr;</a>
                 </div>
@@ -188,8 +199,8 @@
     <!-- REVIEWS SECTION -->
     <section id="reviews" class="reviews-section">
         <div class="container">
-            <span class="sub-heading text-center">ОТЗЫВЫ КЛИЕНТОВ И КОЛЛЕГ</span>
-            <h2 class="section-title text-center">Истории трансформации</h2>
+            <span class="sub-heading text-center">ИСТОРИИ ТРАНСФОРМАЦИИ</span>
+            <h2 class="section-title text-center">Отзывы клиентов</h2>
             
             <div class="reviews-grid">
                 <div class="review-card">
@@ -201,7 +212,7 @@
                     <div class="review-author">— Alexandra (Couple's Therapy)</div>
                 </div>
                 <div class="review-card">
-                    <p>«Буквально за несколько сессий разобрали проблему и нашли пути решения. У нашего брака началась вторая жизнь! Спасибо огромное за возвращенную гармонию.»</p>
+                    <p>«Буквально за несколько сессий разобрали проблему и нашли решения. У нашего брака началась вторая жизнь! Спасибо огромное за возвращенную гармонию.»</p>
                     <div class="review-author">— Сергей</div>
                 </div>
             </div>
@@ -229,7 +240,7 @@
                 </div>
                 <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
-                        <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Гипноанализ & Память</span>
+                        <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Гипноанализ & память</span>
                         <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Гипноз как способ активации вытесненных воспоминаний</h3>
                         <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Анализ механизмов работы памяти, техники регрессии и примеры успешной терапии травматического опыта из практики.</p>
                     </div>
@@ -250,46 +261,54 @@
         </div>
     </section>
 
-    <!-- VIDEO SECTION PREVIEW -->
+    <!-- VIDEO SECTION PREVIEW (Ссылки убраны внутрь кнопок с превью) -->
     <section id="videos-preview" style="padding: 80px 0; background: rgba(15, 45, 55, 0.4);">
         <div class="container">
-            <span class="sub-heading text-center">ВИДЕОАРХИВ И ВЕБИНАРЫ</span>
+            <span class="sub-heading text-center">ВИДЕОАРХИВ & ВЕБИНАРЫ</span>
             <h2 class="section-title text-center">Открытые онлайн-встречи</h2>
             
             <div class="reviews-grid" style="margin-top: 40px;">
+                <!-- Video 1 -->
                 <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
                         <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Родительская гостиная</span>
                         <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Манипуляции и страхи</h3>
-                        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Разбор детских страхов, манипулятивных паттернов поведения и способов гармоничного взаимодействия в семье.</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://vkvideo.ru/video-170488771_456239041?t=10m31s" target="_blank" class="btn-secondary" style="display: block; text-align: center; padding: 10px; font-size: 0.9rem; text-decoration: none;">Смотреть видео ▶</a>
                     </div>
                 </div>
+                <!-- Video 2 -->
                 <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
                         <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Осознанные отношения</span>
                         <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Сепарация</h3>
-                        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Психологическое отделение от родителей, обретение внутренней автономии и построение зрелых партнерских связей.</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://vkvideo.ru/video-170488771_456239042?pl=5696666_55002254" target="_blank" class="btn-secondary" style="display: block; text-align: center; padding: 10px; font-size: 0.9rem; text-decoration: none;">Смотреть видео ▶</a>
                     </div>
                 </div>
+                <!-- Video 3 -->
                 <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
                         <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Осознанные отношения</span>
                         <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Ловушки ревности</h3>
-                        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Природа ревности в паре, скрытые страхи утраты, доверие и работа с деструктивными эмоциональными реакциями.</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://vkvideo.ru/video-170488771_456239044?pl=5696666_55002254&t=15s" target="_blank" class="btn-secondary" style="display: block; text-align: center; padding: 10px; font-size: 0.9rem; text-decoration: none;">Смотреть видео ▶</a>
                     </div>
                 </div>
-                    <!-- Видео: Мы выбираем, нас выбирают -->
-                <div style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
-        <div>
-            <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Осознанные отношения</span>
-            <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Мы выбираем, нас выбирают</h3>
-            <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Закономерности выбора партнеров, бессознательные сценарии и взаимные ожидания в паре.</p>
-        </div>
-        <div style="margin-top: 20px;">
-            <a href="https://vkvideo.ru/video-170488771_456239048?pl=-170488771_5&t=2m22s" target="_blank" class="btn btn-secondary" style="font-size: 0.85rem; padding: 8px 16px;">Смотреть на VK Видео →</a>
-        </div>
-    </div>
-        </div>
+                <!-- Video 4 -->
+                <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Осознанные отношения</span>
+                        <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Мы выбираем, нас выбирают</h3>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://vkvideo.ru/video-170488771_456239049?pl=5696666_55002254" target="_blank" class="btn-secondary" style="display: block; text-align: center; padding: 10px; font-size: 0.9rem; text-decoration: none;">Смотреть видео ▶</a>
+                    </div>
+                </div>
+            </div>
             <div style="text-align: center; margin-top: 40px;">
                 <a href="media.html" class="btn-primary" style="padding: 14px 32px; font-size: 1rem;">
                     Смотреть все видео и вебинары →
@@ -298,60 +317,60 @@
         </div>
     </section>
 
-    <!-- КУРС: КИНОТЕРАПИЯ -->
+    <!-- COURSE: FILM THERAPY -->
     <section class="materials-section" style="padding: 60px 0; background-color: #0b252d; color: #e2e8f0;">
         <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
             <h2 style="color: #C5A059; font-size: 2rem; margin-bottom: 25px; text-align: center;">Курс: Кинотерапия</h2>
             <div class="materials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;">
                 <a href="https://cloud.mail.ru/public/1sjP/q3kdqzXkN" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">ВИДЕО</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">"Daaaaaali!"</div>
+                    <div style="font-size: 1.05rem; font-weight: 600;">«Дааааали!»</div>
                 </a>
                 <a href="https://cloud.mail.ru/public/g6g2/oeYmKcyPz" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">ВИДЕО</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Vybor partneora</div>
+                    <div style="font-size: 1.05rem; font-weight: 600;">Выбор партнера</div>
                 </a>
                 <a href="https://cloud.mail.ru/public/MkZh/5AAN9PC7f" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">ВИДЕО</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Den' nedeli</div>
+                    <div style="font-size: 1.05rem; font-weight: 600;">День недели</div>
                 </a>
                 <a href="https://cloud.mail.ru/public/tXfg/sHbERKmJL" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">ВИДЕО</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Yeretik</div>
+                    <div style="font-size: 1.05rem; font-weight: 600;">Еретик</div>
                 </a>
                 <a href="https://cloud.mail.ru/public/ecLf/yCpJe7CW6" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">ВИДЕО</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">PTSR</div>
+                    <div style="font-size: 1.05rem; font-weight: 600;">ПТСР</div>
                 </a>
                 <a href="https://cloud.mail.ru/public/zSPn/N2z9Vxy7k" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">ВИДЕО</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Kinoterapiya semi I pary</div>
+                    <div style="font-size: 1.05rem; font-weight: 600;">Кинотерапия семьи и пары</div>
                 </a>
                 <a href="https://cloud.mail.ru/public/v4Cy/yY6pRU2dn" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">ВИДЕО</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Kinoterapiya sozavisimosty</div>
+                    <div style="font-size: 1.05rem; font-weight: 600;">Кинотерапия созависимости</div>
                 </a>
                 <a href="https://cloud.mail.ru/public/WH6J/inzpWiMA2" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">ВИДЕО</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Kinoterapiya trevozhnykh rasstroystv</div>
+                    <div style="font-size: 1.05rem; font-weight: 600;">Кинотерапия тревожных расстройств</div>
                 </a>
                 <a href="https://cloud.mail.ru/public/WrM8/s9JtkmPbX" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">ВИДЕО</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Megalopolis</div>
+                    <div style="font-size: 1.05rem; font-weight: 600;">Мегалополис</div>
                 </a>
                 <a href="https://cloud.mail.ru/public/BkTd/DHNNY2S1x" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">ВИДЕО</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Narzissizm</div>
+                    <div style="font-size: 1.05rem; font-weight: 600;">Нарциссизм</div>
                 </a>
                 <a href="https://cloud.mail.ru/public/Zpqv/Fdnv8ZUeu" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">ВИДЕО</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Semeynyye krizisy I ikh preodoleniye</div>
+                    <div style="font-size: 1.05rem; font-weight: 600;">Семейные кризисы и как их преодолеть</div>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- АУДИОТРАНС -->
+    <!-- AUDIO TRANCE -->
     <section class="audio-section" style="padding: 20px 0 60px 0; background-color: #0b252d; color: #e2e8f0;">
         <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
             <div style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 25px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
@@ -375,8 +394,8 @@
     <div id="contactModal" class="modal-overlay" style="display:none;">
         <div class="modal-content">
             <span class="modal-close-btn" onclick="closeModal()">&times;</span>
-            <h3 style="color:#ffffff; text-align:center; margin-bottom:10px;">Запись на консультацию</h3>
-            <p style="color:#94a3b8; text-align:center; font-size:0.9rem;">Свяжитесь напрямую с Инессой Владимировной для выбора удобного времени видеосессии:</p>
+            <h3 style="color:#ffffff; text-align:center; margin-bottom:10px;">Записаться на консультацию</h3>
+            <p style="color:#94a3b8; text-align:center; font-size:0.9rem;">Свяжитесь с Инессой Владимировной напрямую, чтобы выбрать удобное время для видеосессии:</p>
             <a href="https://t.me/Innessa_Simakina" target="_blank" class="btn btn-primary btn-block" style="margin-top:20px; text-align:center;">
                 💬 Написать в Telegram
             </a>
