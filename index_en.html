@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inessa Simakina | Association of Practical Psychology and Hypnotherapy</title>
-    <link rel="stylesheet" href="./style.css?v=3">
+    <link rel="stylesheet" href="./style.css?v=4">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Исправление: золотая рамка у карточек методик в английской версии только при наведении */
-        .methods-grid .method-card {
+        /* Рамки у методик и курсов кинотерапии появляются строго при наведении */
+        .methods-grid .method-card,
+        .materials-grid .material-card {
             border: 1px solid rgba(212, 175, 55, 0.15) !important;
             transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
         }
-        .methods-grid .method-card:hover {
+        .methods-grid .method-card:hover,
+        .materials-grid .material-card:hover {
             border-color: #d4af37 !important;
             transform: translateY(-5px);
         }
@@ -261,14 +263,13 @@
         </div>
     </section>
 
-    <!-- VIDEO SECTION PREVIEW (Без описаний, с кнопками-ссылками на видео) -->
+    <!-- VIDEO SECTION PREVIEW -->
     <section id="videos-preview" style="padding: 80px 0; background: rgba(15, 45, 55, 0.4);">
         <div class="container">
             <span class="sub-heading text-center">VIDEO ARCHIVE & WEBINARS</span>
             <h2 class="section-title text-center">Open Online Meetings</h2>
             
             <div class="reviews-grid" style="margin-top: 40px;">
-                <!-- Video 1 -->
                 <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
                         <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Parenting Living Room</span>
@@ -278,7 +279,6 @@
                         <a href="https://vkvideo.ru/video-170488771_456239041?t=10m31s" target="_blank" class="btn-secondary" style="display: block; text-align: center; padding: 10px; font-size: 0.9rem; text-decoration: none;">Watch video ▶</a>
                     </div>
                 </div>
-                <!-- Video 2 -->
                 <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
                         <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Conscious Relationships</span>
@@ -288,7 +288,6 @@
                         <a href="https://vkvideo.ru/video-170488771_456239042?pl=5696666_55002254" target="_blank" class="btn-secondary" style="display: block; text-align: center; padding: 10px; font-size: 0.9rem; text-decoration: none;">Watch video ▶</a>
                     </div>
                 </div>
-                <!-- Video 3 -->
                 <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
                         <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Conscious Relationships</span>
@@ -298,7 +297,6 @@
                         <a href="https://vkvideo.ru/video-170488771_456239044?pl=5696666_55002254&t=15s" target="_blank" class="btn-secondary" style="display: block; text-align: center; padding: 10px; font-size: 0.9rem; text-decoration: none;">Watch video ▶</a>
                     </div>
                 </div>
-                <!-- Video 4 -->
                 <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
                         <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Conscious Relationships</span>
@@ -322,47 +320,47 @@
         <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
             <h2 style="color: #C5A059; font-size: 2rem; margin-bottom: 25px; text-align: center;">Course: Film Therapy</h2>
             <div class="materials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;">
-                <a href="https://cloud.mail.ru/public/1sjP/q3kdqzXkN" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
+                <a href="https://cloud.mail.ru/public/1sjP/q3kdqzXkN" target="_blank" class="material-card" style="background: #123540; padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
                     <div style="font-size: 1.05rem; font-weight: 600;">"Daaaaaali!"</div>
                 </a>
-                <a href="https://cloud.mail.ru/public/g6g2/oeYmKcyPz" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
+                <a href="https://cloud.mail.ru/public/g6g2/oeYmKcyPz" target="_blank" class="material-card" style="background: #123540; padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
                     <div style="font-size: 1.05rem; font-weight: 600;">Partner Choice</div>
                 </a>
-                <a href="https://cloud.mail.ru/public/MkZh/5AAN9PC7f" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
+                <a href="https://cloud.mail.ru/public/MkZh/5AAN9PC7f" target="_blank" class="material-card" style="background: #123540; padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
                     <div style="font-size: 1.05rem; font-weight: 600;">Day of the Week</div>
                 </a>
-                <a href="https://cloud.mail.ru/public/tXfg/sHbERKmJL" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
+                <a href="https://cloud.mail.ru/public/tXfg/sHbERKmJL" target="_blank" class="material-card" style="background: #123540; padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
                     <div style="font-size: 1.05rem; font-weight: 600;">Heretic</div>
                 </a>
-                <a href="https://cloud.mail.ru/public/ecLf/yCpJe7CW6" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
+                <a href="https://cloud.mail.ru/public/ecLf/yCpJe7CW6" target="_blank" class="material-card" style="background: #123540; padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
                     <div style="font-size: 1.05rem; font-weight: 600;">PTSD</div>
                 </a>
-                <a href="https://cloud.mail.ru/public/zSPn/N2z9Vxy7k" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
+                <a href="https://cloud.mail.ru/public/zSPn/N2z9Vxy7k" target="_blank" class="material-card" style="background: #123540; padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
                     <div style="font-size: 1.05rem; font-weight: 600;">Film Therapy for Family & Couples</div>
                 </a>
-                <a href="https://cloud.mail.ru/public/v4Cy/yY6pRU2dn" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
+                <a href="https://cloud.mail.ru/public/v4Cy/yY6pRU2dn" target="_blank" class="material-card" style="background: #123540; padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
                     <div style="font-size: 1.05rem; font-weight: 600;">Film Therapy for Codependency</div>
                 </a>
-                <a href="https://cloud.mail.ru/public/WH6J/inzpWiMA2" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
+                <a href="https://cloud.mail.ru/public/WH6J/inzpWiMA2" target="_blank" class="material-card" style="background: #123540; padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
                     <div style="font-size: 1.05rem; font-weight: 600;">Film Therapy for Anxiety Disorders</div>
                 </a>
-                <a href="https://cloud.mail.ru/public/WrM8/s9JtkmPbX" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
+                <a href="https://cloud.mail.ru/public/WrM8/s9JtkmPbX" target="_blank" class="material-card" style="background: #123540; padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
                     <div style="font-size: 1.05rem; font-weight: 600;">Megalopolis</div>
                 </a>
-                <a href="https://cloud.mail.ru/public/BkTd/DHNNY2S1x" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
+                <a href="https://cloud.mail.ru/public/BkTd/DHNNY2S1x" target="_blank" class="material-card" style="background: #123540; padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
                     <div style="font-size: 1.05rem; font-weight: 600;">Narcissism</div>
                 </a>
-                <a href="https://cloud.mail.ru/public/Zpqv/Fdnv8ZUeu" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
+                <a href="https://cloud.mail.ru/public/Zpqv/Fdnv8ZUeu" target="_blank" class="material-card" style="background: #123540; padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
                     <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
                     <div style="font-size: 1.05rem; font-weight: 600;">Family Crises and How to Overcome Them</div>
                 </a>
