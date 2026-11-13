@@ -3,497 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inessa Simakina | Association of Practical Psychology and Hypnotherapy</title>
-    <link rel="stylesheet" href="./style.css?v=2">
+    <title>Scientific Articles and Publications | Inessa Simakina</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0b2229;
+            --bg-card: rgba(18, 53, 65, 0.65);
+            --bg-card-hover: rgba(24, 68, 83, 0.85);
+            --gold-primary: #d4af37;
+            --gold-light: #f4e2bb;
+            --text-main: #e4eceb;
+            --text-muted: #9eb2b0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 6%;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            background: rgba(11, 34, 41, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .brand-block .brand-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+        .brand-block .brand-sub {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        nav a:hover, nav a.active {
+            color: var(--gold-primary);
+        }
+        .btn-cta {
+            background-color: var(--gold-primary);
+            color: #0b2229 !important;
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+        }
+        .page-header {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+        .page-kicker {
+            color: var(--gold-primary);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            margin-bottom: 12px;
+            display: block;
+        }
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.5rem;
+            color: var(--gold-light);
+            margin-bottom: 16px;
+        }
+        .page-subtitle {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 28px;
+        }
+        .article-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-primary);
+            background: var(--bg-card-hover);
+        }
+        .review-category {
+            color: var(--gold-primary);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            font-weight: 600;
+        }
+        .author-name {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.25rem;
+            color: var(--gold-light);
+            margin: 12px 0;
+        }
+        .review-text {
+            font-size: 0.92rem;
+            color: #d1dcdb;
+            line-height: 1.6;
+        }
+        .card-footer {
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-meta {
+            font-size: 0.78rem;
+            color: #8a9b9a;
+            text-transform: uppercase;
+        }
+        .btn {
+            display: inline-block;
+            font-size: 0.85rem;
+            padding: 8px 16px;
+            color: var(--gold-primary);
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+        .btn:hover {
+            background: var(--gold-primary);
+            color: #0b2229;
+            font-weight: 600;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
 <body>
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="brand-logo-container">
-                <div class="brand-text-block">
-                    <span class="brand-title">Association of Practical Psychology</span>
-                    <span class="brand-motto">Inessa Simakina's Hypnotherapy Practice</span>
-                </div>
-            </a>
-            <nav class="nav-menu">
-                <a href="index_en.html#about" class="nav-link">About Expert</a>
-                <a href="index_en.html#methods" class="nav-link">Methods</a>
-                <a href="index_en.html#requests" class="nav-link">Requests</a>
-                <a href="index_en.html#books" class="nav-link">Books</a>
-                <a href="reviews.html" class="nav-link">Reviews</a>
-                <a href="articles.html" class="nav-link">Articles</a>
-                <a href="media.html" class="nav-link">Videos</a>
-                <a href="index.html" class="nav-link" style="border: 1px solid rgba(197, 160, 89, 0.4); padding: 4px 10px; border-radius: 4px; color: #C5A059; font-weight: 600;">RU</a>
-                <button onclick="openModal()" class="btn btn-primary">Book Session</button>
-            </nav>
-        </div>
-    </header>
+<header>
+    <div class="brand-block">
+        <div class="brand-title">Association of Practical Psychology</div>
+        <div class="brand-sub">Inessa Simakina's Hypnotherapy Practice</div>
+    </div>
+    <nav>
+        <a href="index_en.html#about">About Expert</a>
+        <a href="index_en.html#methods">Methods</a>
+        <a href="index_en.html#requests">Requests</a>
+        <a href="index_en.html#books">Books</a>
+        <a href="index_en.html#reviews">Reviews</a>
+        <a href="articles_en.html" class="active">Articles</a>
+        <a href="index_en.html#videos">Videos</a>
+        <a href="articles.html" style="color: var(--gold-primary); font-weight: 600;">RU</a>
+        <a href="index_en.html#contact" class="btn-cta">Book Session</a>
+    </nav>
+</header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <span class="badge">DEEP PSYCHOTHERAPY & HYPNOSIS</span>
-                <h1>Finding the right bearing when the ship of consciousness hits a storm</h1>
-                <p>
-                    When stress and anxiety undermine your internal balance, a captain needs a professional navigator. Scientifically proven trance techniques, Erickson hypnotherapy, CBT, and rare international methods to achieve wholeness and harmony.
-                </p>
-                <div class="hero-actions">
-                    <button onclick="openModal()" class="btn btn-primary">Book a Session</button>
-                    <a href="#methods" class="btn btn-secondary">Explore Methods</a>
-                </div>
-                <div class="hero-meta-grid">
-                    <div class="meta-item">
-                        <h4>26+ years</h4>
-                        <p>in psychology & education</p>
-                    </div>
-                    <div class="meta-item">
-                        <h4>4600+</h4>
-                        <p>hours of consultations</p>
-                    </div>
-                    <div class="meta-item">
-                        <h4>EEIP</h4>
-                        <p>academic foundation</p>
-                    </div>
-                </div>
+<main class="container">
+    <div class="page-header">
+        <span class="page-kicker">Scientific &amp; Publicistic Materials</span>
+        <h1>Scientific Articles and Publications</h1>
+        <p class="page-subtitle">Research on the history of hypnosis, psychoanalysis, psychosomatics, and deep analysis of the human unconscious</p>
+    </div>
+    <div class="articles-grid">
+        <!-- Article 1 -->
+        <div class="article-card">
+            <div>
+                <span class="review-category">History of Hypnosis & Philosophy</span>
+                <h3 class="author-name">Hypnosis, Will, and Self-Awareness in 19th-Century Russian Psychology</h3>
+                <p class="review-text">Study of hypnotic suggestions on patients' self-awareness and will in the works of domestic scientists and philosophers of the late 19th century.</p>
             </div>
-            <div class="hero-profile-card">
-                <img src="profile.jpg" alt="Inessa Simakina" class="hero-profile-img">
-                <h3 style="color:#ffffff; font-size:1.2rem;">Inessa Simakina</h3>
-                <p style="color:#c5a059; font-size:0.88rem; margin-top:4px;">Psychologist, Hypnotherapist, Supervisor, Author</p>
+            <div class="card-footer">
+                <span class="card-meta">EEIP Scientific Publication</span>
+                <a href="article-1-en.html" class="btn">Read article →</a>
             </div>
         </div>
-    </section>
-
-    <!-- THOUGHTS / REQUESTS -->
-    <section id="requests" class="thoughts-section">
-        <div class="container">
-            <span class="sub-heading text-center">FAMILIAR THOUGHTS?</span>
-            <h2 class="section-title text-center">What requests clients come to us with</h2>
-            <p class="section-desc text-center">If you recognize yourself in even one of these statements, you can receive caring professional help.</p>
-            
-            <div class="thoughts-grid">
-                <div class="thought-card">"My husband and I frequently argue, and attraction has faded..."</div>
-                <div class="thought-card">"I can't cope with my emotions and constantly feel anxious."</div>
-                <div class="thought-card">"I'm afraid to ride the subway or appear in crowded places."</div>
-                <div class="thought-card">"I feel emotionally burned out and don't know where to move next."</div>
-                <div class="thought-card">"I lack self-confidence, it's hard for me to set personal boundaries."</div>
-                <div class="thought-card">"My child lies, shows aggression, or shuts down from me."</div>
+        <!-- Article 2 -->
+        <div class="article-card">
+            <div>
+                <span class="review-category">Hypnoanalysis & Memory</span>
+                <h3 class="author-name">Hypnosis as a Way to Activate Repressed Memories</h3>
+                <p class="review-text">Analysis of memory mechanisms, regression techniques, and examples of successful trauma therapy from clinical practice.</p>
+            </div>
+            <div class="card-footer">
+                <span class="card-meta">EEIP Scientific Publication</span>
+                <a href="article-2-en.html" class="btn">Read article →</a>
             </div>
         </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-grid">
-                <div>
-                    <span class="sub-heading">EDUCATION & EXPERIENCE</span>
-                    <h2>Inessa Vladimirovna Simakina</h2>
-                    <p style="color:#94a3b8; margin-top:15px;">
-                        Psychologist, hypnotherapist, profiler, editor of scientific courses and collections at the East-European Institute of Psychoanalysis (EEIP). Organizer and expert of international psychological conferences.
-                    </p>
-                    <ul class="about-text-list">
-                        <li>East-European Institute of Psychoanalysis (Psychological Counseling)</li>
-                        <li>Best Erickson Hypnotherapy techniques for life and health</li>
-                        <li>Integrative psychotherapy for neuroses, anxiety, and panic attacks</li>
-                        <li>Short-term psychotherapy for sexual dysfunctions and psychosomatics</li>
-                        <li>Over 450 hours of personal therapy, supervision, and intervision</li>
-                        <li>Multicultural sensitivities (consultations in Russian and English)</li>
-                    </ul>
-                </div>
-                <div>
-                    <div style="background-color:#162232; padding:30px; border-radius:12px; border:1px solid #1e293b;">
-                        <h3 style="color:#c5a059; margin-bottom:15px;">Author's Programs & Projects</h3>
-                        <p style="color:#94a3b8; font-size:0.92rem; line-height:1.6;">
-                            • Training "Development of Communication Skills and Confidence"<br>
-                            • Course "Theory of Deception: Profiling at 5+"<br>
-                            • Program "Partner Choice and Harmonious Relationships"<br>
-                            • Project "Online Theatre of Emotions" & Film Club<br>
-                            • Support & supervision groups for novice specialists
-                        </p>
-                    </div>
-                </div>
+        <!-- Article 3 -->
+        <div class="article-card">
+            <div>
+                <span class="review-category">Psychosomatics & Anxiety</span>
+                <h3 class="author-name">Hypnotic Scripts and Autogenic Training for Somatized Depression and Anxiety Disorders</h3>
+                <p class="review-text">Therapeutic protocols for mind-body syndromes, bulimia, back pain, and self-esteem improvement.</p>
+            </div>
+            <div class="card-footer">
+                <span class="card-meta">EEIP Scientific Publication</span>
+                <a href="article-3-en.html" class="btn">Read article →</a>
             </div>
         </div>
-    </section>
-
-    <!-- METHODS & EXCLUSIVES -->
-    <section id="methods" class="methods-section">
-        <div class="container">
-            <span class="sub-heading text-center">EFFECTIVE TOOLS</span>
-            <h2 class="section-title text-center">Psychotherapeutic Methods</h2>
-            <p class="section-desc text-center">A combination of traditional psychoanalysis, CBT, and rare international trance practices.</p>
-            <div class="methods-grid">
-                <div class="method-card featured">
-                    <span style="color:#c5a059; font-size:0.75rem; font-weight:700;">INTERNATIONAL PRACTICE (SOUTH AFRICA)</span>
-                    <h3 style="margin-top:5px;">African Hypnotherapy</h3>
-                    <p>A unique 3-session trance therapy course. Allows working through deep psychosomatics, fears, blocks, and unlocking internal potential ("awakening the inner lion").</p>
-                </div>
-                <div class="method-card featured">
-                    <span style="color:#c5a059; font-size:0.75rem; font-weight:700;">EASTERN TECHNIQUE (CHINA)</span>
-                    <h3 style="margin-top:5px;">Imaged Communication (ICP)</h3>
-                    <p>Psychotherapy based on Eastern philosophy, Buddhism, and Taoism (by Zhu Jianjun). Gentle work with the unconscious through symbols and images.</p>
-                </div>
-                <div class="method-card">
-                    <h3>Cognitive Behavioral Therapy (CBT)</h3>
-                    <p>Evidence-based approach for working with panic attacks, depression, catastrophizing, and negative cognitive patterns.</p>
-                </div>
-                <div class="method-card">
-                    <h3>Erickson Hypnosis & IFT</h3>
-                    <p>Gentle trance states for addressing psychosomatic symptoms, deep-seated trauma, and metabolic disruptions.</p>
-                </div>
-                <div class="method-card">
-                    <h3>Family Therapy & Sexology</h3>
-                    <p>Overcoming crises at 3, 7, and 10 years of marriage, resolving infidelity, restoring attraction and harmonious communication in couples.</p>
-                </div>
-                <div class="method-card">
-                    <h3>Film Therapy & Art Therapy</h3>
-                    <p>Therapy through the analysis of artistic imagery, cinematic works, and symbols to process repressed emotions.</p>
-                </div>
+        <!-- Article 4 -->
+        <div class="article-card">
+            <div>
+                <span class="review-category">Theory & Practice</span>
+                <h3 class="author-name">Convergence of Hypnosis and Psychoanalysis</h3>
+                <p class="review-text">Synthesis of classical psychoanalysis and modern hypnotherapy to work with resistance, PTSDs, and phobias.</p>
+            </div>
+            <div class="card-footer">
+                <span class="card-meta">EEIP Scientific Publication</span>
+                <a href="article-4-en.html" class="btn">Read article →</a>
             </div>
         </div>
-    </section>
-
-    <!-- BOOKS SECTION -->
-    <section id="books" class="books-section">
-        <div class="container">
-            <span class="sub-heading text-center">PUBLICATIONS</span>
-            <h2 class="section-title text-center">Books by Inessa Simakina</h2>
-            
-            <div class="books-grid">
-                <div class="book-card">
-                    <h3>"Love is a Choice"</h3>
-                    <p>A book about the psychology of harmonious relationships, conscious partner selection, and overcoming codependent scenarios.</p>
-                    <a href="https://www.litres.ru/71501662/" target="_blank" class="btn btn-secondary">Read on LitRes &rarr;</a>
-                </div>
-                <div class="book-card">
-                    <h3>"Theory and Practice of Deception"</h3>
-                    <p>A practical guide to profiling, recognizing verbal and non-verbal manipulations in business and everyday life.</p>
-                    <a href="https://www.litres.ru/book/inessa-simakina/teoriya-i-praktika-obmana-profayling-na-pyat-s-plusom-72194455/" target="_blank" class="btn btn-secondary">Buy on LitRes &rarr;</a>
-                </div>
-                <div class="book-card">
-                    <h3>"Film Therapy"</h3>
-                    <p>Addressing mental disorders, anxiety, and neuroses through deep psychological analysis of world cinema.</p>
-                    <a href="https://www.litres.ru/73977451/" target="_blank" class="btn btn-secondary">Buy on LitRes &rarr;</a>
-                </div>
+        <!-- Article 5 -->
+        <div class="article-card">
+            <div>
+                <span class="review-category">Film Therapy</span>
+                <h3 class="author-name">Christopher Nolan's Odyssey: A Psychological Analysis</h3>
+                <p class="review-text">Deep psychological analysis of Nolan's film: character trauma, guilt, memory as punishment, and the modern odyssey.</p>
+            </div>
+            <div class="card-footer">
+                <span class="card-meta">Film Therapy Essay</span>
+                <a href="article-5-en.html" class="btn">Read review →</a>
             </div>
         </div>
-    </section>
-
-    <!-- REVIEWS SECTION -->
-    <section id="reviews" class="reviews-section">
-        <div class="container">
-            <span class="sub-heading text-center">CLIENT & COLLEAGUE REVIEWS</span>
-            <h2 class="section-title text-center">Stories of Transformation</h2>
-            
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <p>"Inessa corrected psychosomatic illnesses that arose from psychological trauma. With the help of Erickson hypnosis, medications finally started working in a way endocrinologists couldn't achieve for 20 years!"</p>
-                    <div class="review-author">— Andrey Cherkassky</div>
-                </div>
-                <div class="review-card">
-                    <p>"Inessa is a great therapist. Her English is perfect, she has multicultural sensitivities. After each session I immediately felt better. I approached her for couple's therapy and she helped a lot."</p>
-                    <div class="review-author">— Alexandra (Couple's Therapy)</div>
-                </div>
-                <div class="review-card">
-                    <p>"Literally in a few sessions we sorted out the core problem and found solutions. Our marriage got a second life! Thank you so much for restoring our harmony."</p>
-                    <div class="review-author">— Sergey</div>
-                </div>
+        <!-- Article 6 -->
+        <div class="article-card">
+            <div>
+                <span class="review-category">Publicistics & Philosophy</span>
+                <h3 class="author-name">"Superfluous Man" Syndrome in Culture and Psychotherapy</h3>
+                <p class="review-text">Alienation, loneliness, and existential experience of isolation in literary, cinematic, and modern client requests.</p>
+            </div>
+            <div class="card-footer">
+                <span class="card-meta">Publicistics</span>
+                <a href="article-6-en.html" class="btn">Read article →</a>
             </div>
         </div>
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="reviews.html" class="btn-primary" style="padding: 14px 32px; font-size: 1rem;">
-                Read all client reviews (18) →
-            </a>
-        </div>
-    </section>
-
-    <!-- ARTICLES SECTION PREVIEW -->
-    <section id="articles" style="padding: 80px 0; background: rgba(10, 31, 38, 0.5);">
-        <div class="container">
-            <span class="sub-heading text-center">SCIENTIFIC & PUBLICISTIC MATERIALS</span>
-            <h2 class="section-title text-center">Articles and Publications</h2>
-            
-            <div class="reviews-grid" style="margin-top: 40px;">
-                <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">History of Hypnosis</span>
-                        <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Hypnosis, Will, and Self-Awareness in 19th-Century Russian Psychology</h3>
-                        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Study of hypnotic suggestions on patients' self-awareness and will in the works of domestic scientists and philosophers of the late 19th century.</p>
-                    </div>
-                </div>
-                <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Hypnoanalysis & Memory</span>
-                        <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Hypnosis as a Way to Activate Repressed Memories</h3>
-                        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Analysis of memory mechanisms, regression techniques, and examples of successful trauma therapy from clinical practice.</p>
-                    </div>
-                </div>
-                <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Theory & Practice</span>
-                        <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Convergence of Hypnosis and Psychoanalysis</h3>
-                        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Synthesis of classical psychoanalysis and modern hypnotherapy areas for working with anxiety, depression, and resistance.</p>
-                    </div>
-                </div>
+        <!-- Article 7 -->
+        <div class="article-card">
+            <div>
+                <span class="review-category">Scientific Article • Hypnotherapy</span>
+                <h3 class="author-name">Choice of Hypnotherapy Script Depending on Personality Type (Karen Horney Model)</h3>
+                <p class="review-text">Application of Karen Horney's theory (neurotic conflict and three behavioral types) in modern Ericksonian hypnotherapy.</p>
             </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <div style="text-align: center; margin-top: 40px;">
-    <a href="articles_en.html" class="btn-cta" style="display: inline-block; padding: 14px 32px; font-size: 1rem; text-decoration: none;">Read all articles and publications →</a>
-</div>
-            </div>
-        </div>
-    </section>
-
-   <!-- Article 1 -->
-<div class="article-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-    <div>
-        <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">History of Hypnosis & Philosophy</span>
-        <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Hypnosis, Will, and Self-Awareness in 19th-Century Russian Psychology</h3>
-        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Study of hypnotic suggestions on patients' self-awareness and will in the works of domestic scientists and philosophers of the late 19th century.</p>
-    </div>
-    <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 0.8rem; color: #8a9b9a; text-transform: uppercase; letter-spacing: 0.5px;">EEIP Scientific Publication</span>
-        <a href="article-1-en.html" class="btn" style="font-size: 0.85rem; padding: 8px 16px; color: #d4af37; border-color: rgba(212, 175, 55, 0.4);">Read article →</a>
-    </div>
-</div>
-
-<!-- Article 2 -->
-<div class="article-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-    <div>
-        <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Hypnoanalysis & Memory</span>
-        <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Hypnosis as a Way to Activate Repressed Memories</h3>
-        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Analysis of memory mechanisms, regression techniques, and examples of successful trauma therapy from clinical practice.</p>
-    </div>
-    <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 0.8rem; color: #8a9b9a; text-transform: uppercase; letter-spacing: 0.5px;">EEIP Scientific Publication</span>
-        <a href="article-2-en.html" class="btn" style="font-size: 0.85rem; padding: 8px 16px; color: #d4af37; border-color: rgba(212, 175, 55, 0.4);">Read article →</a>
-    </div>
-</div>
-
-<!-- Article 3 -->
-<div class="article-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-    <div>
-        <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Psychosomatics & Anxiety</span>
-        <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Hypnotic Scripts and Autogenic Training for Somatized Depression and Anxiety Disorders</h3>
-        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Therapeutic protocols for mind-body syndromes, bulimia, back pain, and self-esteem improvement.</p>
-    </div>
-    <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 0.8rem; color: #8a9b9a; text-transform: uppercase; letter-spacing: 0.5px;">EEIP Scientific Publication</span>
-        <a href="article-3-en.html" class="btn" style="font-size: 0.85rem; padding: 8px 16px; color: #d4af37; border-color: rgba(212, 175, 55, 0.4);">Read article →</a>
-    </div>
-</div>
-
-<!-- Article 4 -->
-<div class="article-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-    <div>
-        <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Theory & Practice</span>
-        <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Convergence of Hypnosis and Psychoanalysis</h3>
-        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Synthesis of classical psychoanalysis and modern hypnotherapy to work with resistance, PTSDs, and phobias.</p>
-    </div>
-    <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 0.8rem; color: #8a9b9a; text-transform: uppercase; letter-spacing: 0.5px;">EEIP Scientific Publication</span>
-        <a href="article-4-en.html" class="btn" style="font-size: 0.85rem; padding: 8px 16px; color: #d4af37; border-color: rgba(212, 175, 55, 0.4);">Read article →</a>
-    </div>
-</div>
-
-<!-- Article 5 -->
-<div class="article-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-    <div>
-        <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Film Therapy</span>
-        <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Christopher Nolan's Odyssey: A Psychological Analysis</h3>
-        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Deep psychological analysis of Nolan's film: character trauma, guilt, memory as punishment, and the modern odyssey.</p>
-    </div>
-    <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 0.8rem; color: #8a9b9a; text-transform: uppercase; letter-spacing: 0.5px;">Film Therapy Essay</span>
-        <a href="article-5-en.html" class="btn" style="font-size: 0.85rem; padding: 8px 16px; color: #d4af37; border-color: rgba(212, 175, 55, 0.4);">Read review →</a>
-    </div>
-</div>
-
-<!-- Article 6 -->
-<div class="article-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-    <div>
-        <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Publicistics & Philosophy</span>
-        <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">"Superfluous Man" Syndrome in Culture and Psychotherapy</h3>
-        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Alienation, loneliness, and existential experience of isolation in literary, cinematic, and modern client requests.</p>
-    </div>
-    <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 0.8rem; color: #8a9b9a; text-transform: uppercase; letter-spacing: 0.5px;">Publicistics</span>
-        <a href="article-6-en.html" class="btn" style="font-size: 0.85rem; padding: 8px 16px; color: #d4af37; border-color: rgba(212, 175, 55, 0.4);">Read article →</a>
-    </div>
-</div>
-
-<!-- Article 7 -->
-<div class="article-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-    <div>
-        <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Scientific Article • Hypnotherapy</span>
-        <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Choice of Hypnotherapy Script Depending on Personality Type (Karen Horney Model)</h3>
-        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Application of Karen Horney's theory (neurotic conflict and three behavioral types) in modern Ericksonian hypnotherapy.</p>
-    </div>
-    <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 0.8rem; color: #8a9b9a; text-transform: uppercase; letter-spacing: 0.5px;">EEIP Scientific Publication</span>
-        <a href="article-7-en.html" class="btn" style="font-size: 0.85rem; padding: 8px 16px; color: #d4af37; border-color: rgba(212, 175, 55, 0.4);">Read article →</a>
-    </div>
-</div>               
-    
-    <!-- VIDEO SECTION PREVIEW -->
-    <section id="videos-preview" style="padding: 80px 0; background: rgba(15, 45, 55, 0.4);">
-        <div class="container">
-            <span class="sub-heading text-center">VIDEO ARCHIVE & WEBINARS</span>
-            <h2 class="section-title text-center">Open Online Meetings</h2>
-            
-            <div class="reviews-grid" style="margin-top: 40px;">
-                <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Parenting Living Room</span>
-                        <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Manipulations and Fears</h3>
-                        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Review of children's fears, manipulative behavioral patterns, and ways of establishing harmonious family interactions.</p>
-                    </div>
-                </div>
-                <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Conscious Relationships</span>
-                        <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Separation</h3>
-                        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Psychological separation from parents, gaining internal autonomy, and building mature partner connections.</p>
-                    </div>
-                </div>
-                <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Conscious Relationships</span>
-                        <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">Traps of Jealousy</h3>
-                        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">The nature of jealousy in a couple, hidden fears of loss, trust, and working with destructive emotional reactions.</p>
-                    </div>
-                </div>
-            <!-- Video: We Choose, We Are Chosen -->
-                <div class="review-card-full" style="background: rgba(18, 53, 65, 0.6); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <span class="review-category" style="color: #d4af37; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">Conscious Relationships</span>
-                        <h3 class="author-name" style="font-size: 1.15rem; color: #f4e2bb; margin: 10px 0;">We Choose, We Are Chosen</h3>
-                        <p class="review-text" style="font-size: 0.9rem; color: #d1dcdb; line-height: 1.6;">Patterns of partner selection, unconscious scenarios, and mutual expectations in a couple.</p>
-                    </div>
-                    <div style="margin-top: 20px;">
-                        <a href="https://vkvideo.ru/video-170488771_456239048?pl=-170488771_5&t=2m22s" target="_blank" class="btn btn-secondary" style="font-size: 0.85rem; padding: 8px 16px;">Watch on VK Video →</a>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="media.html" class="btn-primary" style="padding: 14px 32px; font-size: 1rem;">
-                    Watch all videos and webinars →
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- COURSE: FILM THERAPY -->
-    <section class="materials-section" style="padding: 60px 0; background-color: #0b252d; color: #e2e8f0;">
-        <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
-            <h2 style="color: #C5A059; font-size: 2rem; margin-bottom: 25px; text-align: center;">Course: Film Therapy</h2>
-            <div class="materials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;">
-                <a href="https://cloud.mail.ru/public/1sjP/q3kdqzXkN" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
-                    <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">"Daaaaaali!"</div>
-                </a>
-                <a href="https://cloud.mail.ru/public/g6g2/oeYmKcyPz" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
-                    <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Partner Choice</div>
-                </a>
-                <a href="https://cloud.mail.ru/public/MkZh/5AAN9PC7f" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
-                    <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Day of the Week</div>
-                </a>
-                <a href="https://cloud.mail.ru/public/tXfg/sHbERKmJL" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
-                    <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Heretic</div>
-                </a>
-                <a href="https://cloud.mail.ru/public/ecLf/yCpJe7CW6" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
-                    <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">PTSD</div>
-                </a>
-                <a href="https://cloud.mail.ru/public/zSPn/N2z9Vxy7k" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
-                    <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Film Therapy for Family & Couples</div>
-                </a>
-                <a href="https://cloud.mail.ru/public/v4Cy/yY6pRU2dn" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
-                    <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Film Therapy for Codependency</div>
-                </a>
-                <a href="https://cloud.mail.ru/public/WH6J/inzpWiMA2" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
-                    <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Film Therapy for Anxiety Disorders</div>
-                </a>
-                <a href="https://cloud.mail.ru/public/WrM8/s9JtkmPbX" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
-                    <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Megalopolis</div>
-                </a>
-                <a href="https://cloud.mail.ru/public/BkTd/DHNNY2S1x" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
-                    <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Narcissism</div>
-                </a>
-                <a href="https://cloud.mail.ru/public/Zpqv/Fdnv8ZUeu" target="_blank" class="material-card" style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 20px; border-radius: 8px; text-decoration: none; color: #fff; display: block;">
-                    <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">VIDEO</div>
-                    <div style="font-size: 1.05rem; font-weight: 600;">Family Crises and How to Overcome Them</div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- AUDIO TRANCE -->
-    <section class="audio-section" style="padding: 20px 0 60px 0; background-color: #0b252d; color: #e2e8f0;">
-        <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
-            <div style="background: #123540; border: 1px solid rgba(197, 160, 89, 0.3); padding: 25px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-                <div>
-                    <div style="font-size: 0.75rem; color: #C5A059; font-weight: 700; margin-bottom: 5px;">AUDIO TRANCE</div>
-                    <div style="font-size: 1.15rem; font-weight: 600; color: #fff;">Weight Loss Trance (trans_na_pokhudenie.mp3)</div>
-                </div>
-                <a href="https://cloud.mail.ru/public/ZTKL/zfpAcxp73" target="_blank" style="background-color: #C5A059; color: #0b252d; padding: 12px 24px; border-radius: 6px; font-weight: 600; text-decoration: none; display: inline-block;">Listen / Download</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Association of Practical Psychology and Hypnotherapy | Inessa Simakina | psychological-therapy.help</p>
-        </div>
-    </footer>
-
-    <!-- MODAL -->
-    <div id="contactModal" class="modal-overlay" style="display:none;">
-        <div class="modal-content">
-            <span class="modal-close-btn" onclick="closeModal()">&times;</span>
-            <h3 style="color:#ffffff; text-align:center; margin-bottom:10px;">Book a Consultation</h3>
-            <p style="color:#94a3b8; text-align:center; font-size:0.9rem;">Contact Inessa Vladimirovna directly to choose a convenient time for your video session:</p>
-            <a href="https://t.me/Innessa_Simakina" target="_blank" class="btn btn-primary btn-block" style="margin-top:20px; text-align:center;">
-                💬 Write on Telegram
-            </a>
-            <div style="margin-top:25px; border-top:1px solid #1e293b; padding-top:15px;">
-                <p style="color:#c5a059; font-size:0.8rem; text-align:center; font-weight:700;">OTHER WAYS TO CONNECT</p>
-                <ul class="direct-contacts-list">
-                    <li>📱 <a href="https://wa.me/79219653622" target="_blank">WhatsApp Direct</a></li>
-                    <li>📧 <a href="mailto:inessa@psychological-therapy.help">Send Email</a></li>
-                </ul>
+            <div class="card-footer">
+                <span class="card-meta">EEIP Scientific Publication</span>
+                <a href="article-7-en.html" class="btn">Read article →</a>
             </div>
         </div>
     </div>
+</main>
 
-    <script>
-    function openModal() {
-        document.getElementById("contactModal").style.display = "flex";
-    }
-    function closeModal() {
-        document.getElementById("contactModal").style.display = "none";
-    }
-    window.onclick = function(event) {
-        const modal = document.getElementById("contactModal");
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    }
-    </script>
+<footer>
+    <p>&copy; 2026 Inessa Simakina — Practical Psychology &amp; Hypnotherapy. All rights reserved.</p>
+</footer>
 </body>
 </html>
